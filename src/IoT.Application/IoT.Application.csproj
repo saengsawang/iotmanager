@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>IoT.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="L.52ABP.Application" Version="4.1.286.98" />
+    <PackageReference Include="MongoDB.Driver" Version="2.10.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IoT.Core\IoT.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DeviceAppService\DeviceService\Dto\" />
+    <Folder Include="DeviceAppService\DTO\" />
+    <Folder Include="DeviceAppService\OnlineTimeDailyService\Dto\" />
+    <Folder Include="DeviceAppService\DeviceTypeService\" />
+    <Folder Include="DeviceAppService\DeviceTypeService\DTO\" />
+    <Folder Include="ThresholdAppService\" />
+    <Folder Include="ThresholdAppService\SevetityAppService\" />
+    <Folder Include="ThresholdAppService\SevetityAppService\DTO\" />
+  </ItemGroup>
+
+</Project>
