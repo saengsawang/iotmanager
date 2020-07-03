@@ -16,13 +16,14 @@
 
   <ItemGroup>
     <Folder Include="DeviceAppService\DeviceService\Dto\" />
-    <Folder Include="DeviceAppService\DTO\" />
     <Folder Include="DeviceAppService\OnlineTimeDailyService\Dto\" />
     <Folder Include="DeviceAppService\DeviceTypeService\" />
     <Folder Include="DeviceAppService\DeviceTypeService\DTO\" />
     <Folder Include="ThresholdAppService\" />
     <Folder Include="ThresholdAppService\SevetityAppService\" />
     <Folder Include="ThresholdAppService\SevetityAppService\DTO\" />
+    <Folder Include="FieldAppService\" />
+    <Folder Include="ThresholdAppService\DTO\" />
   </ItemGroup>
 
 </Project>

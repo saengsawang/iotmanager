@@ -9289,11 +9289,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.EntityFrameworkCore/IoT.EntityFrameworkCore.csproj",
+      "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.EntityFrameworkCore/IoT.EntityFrameworkCore.csproj",
       "projectName": "IoT.EntityFrameworkCore",
-      "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.EntityFrameworkCore/IoT.EntityFrameworkCore.csproj",
+      "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.EntityFrameworkCore/IoT.EntityFrameworkCore.csproj",
       "packagesPath": "/Users/s9rt1v/.nuget/packages/",
-      "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.EntityFrameworkCore/obj/",
+      "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.EntityFrameworkCore/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -9310,8 +9310,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.Core/IoT.Core.csproj": {
-              "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.Core/IoT.Core.csproj"
+            "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.Core/IoT.Core.csproj": {
+              "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.Core/IoT.Core.csproj"
             }
           }
         }

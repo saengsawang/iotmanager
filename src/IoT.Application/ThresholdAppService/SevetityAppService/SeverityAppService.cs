@@ -47,7 +47,7 @@ namespace IoT.Application.ThresholdAppService.SevetityAppService
                 throw new ApplicationException("Severity已存在");
             }
 
-            var severity = ObjectMapper.Map<Severity>(severityQuery.FirstOrDefault());
+            var severity = ObjectMapper.Map<Severity>(input);
             var result = _severityRepository.Insert(severity);
             CurrentUnitOfWork.SaveChanges();
             return ObjectMapper.Map<SeverityDto>(result);

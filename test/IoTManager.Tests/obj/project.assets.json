@@ -12377,11 +12377,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/test/IoTManager.Tests/IoTManager.Tests.csproj",
+      "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/test/IoTManager.Tests/IoTManager.Tests.csproj",
       "projectName": "IoTManager.Tests",
-      "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/test/IoTManager.Tests/IoTManager.Tests.csproj",
+      "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/test/IoTManager.Tests/IoTManager.Tests.csproj",
       "packagesPath": "/Users/s9rt1v/.nuget/packages/",
-      "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/test/IoTManager.Tests/obj/",
+      "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/test/IoTManager.Tests/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -12398,11 +12398,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Application/IoTManager.Application.csproj": {
-              "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Application/IoTManager.Application.csproj"
+            "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Application/IoTManager.Application.csproj": {
+              "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Application/IoTManager.Application.csproj"
             },
-            "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.EntityFrameworkCore/IoTManager.EntityFrameworkCore.csproj": {
-              "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.EntityFrameworkCore/IoTManager.EntityFrameworkCore.csproj"
+            "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.EntityFrameworkCore/IoTManager.EntityFrameworkCore.csproj": {
+              "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.EntityFrameworkCore/IoTManager.EntityFrameworkCore.csproj"
             }
           }
         }

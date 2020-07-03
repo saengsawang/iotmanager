@@ -7,7 +7,8 @@ namespace IoT.Application.DeviceAppService
 {
     public class DeviceTagDto:EntityDto<int>
     {
-
+        public int TagId { get; set; }
+        public string DeviceName { get; set; }
         public DateTime CreationTime { get; set; }
         public DateTime? LastModificationTime { get; set; }
     }

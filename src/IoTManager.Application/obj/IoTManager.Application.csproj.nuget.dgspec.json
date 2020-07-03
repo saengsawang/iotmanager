@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Application/IoTManager.Application.csproj": {}
+    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Application/IoTManager.Application.csproj": {}
   },
   "projects": {
-    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Application/IoTManager.Application.csproj": {
+    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Application/IoTManager.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Application/IoTManager.Application.csproj",
+        "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Application/IoTManager.Application.csproj",
         "projectName": "IoTManager.Application",
-        "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Application/IoTManager.Application.csproj",
+        "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Application/IoTManager.Application.csproj",
         "packagesPath": "/Users/s9rt1v/.nuget/packages/",
-        "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Application/obj/",
+        "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Application/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -28,8 +28,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Core/IoTManager.Core.csproj": {
-                "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Core/IoTManager.Core.csproj"
+              "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Core/IoTManager.Core.csproj": {
+                "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Core/IoTManager.Core.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Core/IoTManager.Core.csproj": {
+    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Core/IoTManager.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Core/IoTManager.Core.csproj",
+        "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Core/IoTManager.Core.csproj",
         "projectName": "IoTManager.Core",
-        "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Core/IoTManager.Core.csproj",
+        "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Core/IoTManager.Core.csproj",
         "packagesPath": "/Users/s9rt1v/.nuget/packages/",
-        "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Core/obj/",
+        "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Core/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

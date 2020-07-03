@@ -1,0 +1,98 @@
+﻿<Properties StartupConfiguration="{38E184BD-E874-4633-A947-AED4FDB73F40}|Default">
+  <MonoDevelop.Ide.ItemProperties.src.IoTManager.Web.Host PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/IoT.Application/ThresholdAppService/ThresholdAppService.cs">
+    <Files>
+      <File FileName="src/IoT.Application/DeviceAppService/TagService/TagAppService.cs" Line="51" Column="1" />
+      <File FileName="src/IoT.Application/DeviceAppService/DeviceTagService/DeviceTagAppService.cs" />
+      <File FileName="src/IoT.Application/FieldAppService/FieldAppService.cs" />
+      <File FileName="src/IoT.Application/ThresholdAppService/DTO/ThresholdDto.cs" />
+      <File FileName="src/IoT.Application/ThresholdAppService/ThresholdAppService.cs" Line="32" Column="95" />
+      <File FileName="src/IoT.Application/WorkshopAppService/WorkshopAppService.cs" />
+      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/DeviceAppService.cs" />
+      <File FileName="src/IoT.Application/GatewayAppService/GatewayAppService.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="IoTManager" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="IoT" expanded="True">
+                <Node name="IoT.Application" expanded="True">
+                  <Node name="Dependencies" expanded="True" />
+                  <Node name="CityAppService" expanded="True">
+                    <Node name="DTO" expanded="True" />
+                  </Node>
+                  <Node name="DeviceAppService" expanded="True">
+                    <Node name="DeviceService" expanded="True" />
+                    <Node name="DeviceTagService" expanded="True">
+                      <Node name="Dto" expanded="True" />
+                    </Node>
+                    <Node name="DeviceTypeService" expanded="True" />
+                    <Node name="OnlineTimeDailyService" expanded="True">
+                      <Node name="Dto" expanded="True" />
+                    </Node>
+                    <Node name="TagService" expanded="True" />
+                  </Node>
+                  <Node name="DeviceDataAppService" expanded="True">
+                    <Node name="Dto" expanded="True" />
+                  </Node>
+                  <Node name="FieldAppService" expanded="True">
+                    <Node name="DTO" expanded="True" />
+                  </Node>
+                  <Node name="GatewayAppService" expanded="True">
+                    <Node name="DTO" expanded="True" />
+                  </Node>
+                  <Node name="ThresholdAppService" expanded="True">
+                    <Node name="DTO" expanded="True" />
+                    <Node name="ThresholdAppService.cs" selected="True" />
+                  </Node>
+                  <Node name="WorkshopAppService" expanded="True">
+                    <Node name="DTO" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="IoT.Core" expanded="True">
+                  <Node name="Dependencies" expanded="True">
+                    <Node name="PackageDependencies" expanded="True" />
+                  </Node>
+                  <Node name="Devices" expanded="True">
+                    <Node name="Entity" expanded="True" />
+                  </Node>
+                  <Node name="Fields" expanded="True">
+                    <Node name="Entity" expanded="True" />
+                  </Node>
+                  <Node name="Thresholds" expanded="True">
+                    <Node name="Entity" expanded="True" />
+                  </Node>
+                  <Node name="Workshops" expanded="True">
+                    <Node name="Entity" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="IoT.MongoDB" expanded="True">
+                  <Node name="Dependencies" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="IoTManager" expanded="True">
+                <Node name="IoTManager.Application" expanded="True" />
+                <Node name="IoTManager.Core" expanded="True" />
+                <Node name="IoTManager.EntityFrameworkCore" expanded="True" />
+              </Node>
+              <Node name="IoTManager.Web.Core" expanded="True" />
+              <Node name="IoTManager.Web.Host" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Properties" expanded="True" />
+                <Node name="Startup" expanded="True" />
+                <Node name="appsettings.json" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

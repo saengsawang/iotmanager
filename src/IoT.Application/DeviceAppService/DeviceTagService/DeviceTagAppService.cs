@@ -14,37 +14,91 @@ using IoT.Application.DeviceAppService.DeviceTagService.Dto;
 
 namespace IoT.Application.DeviceAppService
 {
-    class DeviceTagAppService : ApplicationService, IDeviceTagAppService
+    public class DeviceTagAppService : ApplicationService, IDeviceTagAppService
     {
-
-        public DeviceTagAppService()
+        private readonly IRepository<DeviceTag, int> _deviceTagRepository;
+        private readonly IRepository<Device, int> _deviceRepository;
+        private readonly IRepository<Tag, int> _tagRepository;
+        public DeviceTagAppService(IRepository<DeviceTag, int> deviceTagRepository, IRepository<Device, int> deviceRepository, IRepository<Tag, int> tagRepository)
         {
-
-        }
-
-        public DeviceTagDto Create(CreateDeviceTagDto input)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(EntityDto<int> input)
-        {
-            throw new NotImplementedException();
+            _deviceTagRepository = deviceTagRepository;
+            _deviceRepository = deviceRepository;
+            _tagRepository = tagRepository;
         }
 
         public DeviceTagDto Get(EntityDto<int> input)
         {
-            throw new NotImplementedException();
+            var query = _deviceTagRepository.GetAllIncluding(d => d.Device).Where(d => d.Id == input.Id);
+            var entity = query.FirstOrDefault(); 
+            return ObjectMapper.Map<DeviceTagDto>(entity);
         }
 
         public PagedResultDto<DeviceTagDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
-            throw new NotImplementedException();
+            var query = _deviceTagRepository.GetAll().Include(dtg=>dtg.Device);
+            var total = query.Count();
+            var result = input.Sorting != null
+                ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()
+                : query.PageBy(input).ToList();
+            return new PagedResultDto<DeviceTagDto>(total, ObjectMapper.Map<List<DeviceTagDto>>(result));
+        }
+
+        public DeviceTagDto Create(CreateDeviceTagDto input)
+        {
+            var deviceQuery = _deviceRepository.GetAll().Where(d=>d.DeviceName == input.DeviceName);
+            if (!deviceQuery.Any())
+            {
+                throw new ApplicationException("该设备不存在");
+            }
+
+            var deviceTagQuery = _deviceTagRepository.GetAll().Where(dtg=>dtg.TagId==input.TagId);
+            if (deviceTagQuery.Any())
+            {
+                throw new ApplicationException("该设备tag已存在");
+            }
+            var tagQuery = _tagRepository.GetAll().Where(tg=>tg.Id==input.TagId);
+            if(!tagQuery.Any())
+            {
+                throw new ApplicationException("tagId不存在");
+            }
+            var device = deviceQuery.FirstOrDefault();
+            var deviceTag = new DeviceTag()
+            {
+                TagId = input.TagId,
+                Device = device,
+                Id = input.Id,
+            };
+            var result = _deviceTagRepository.Insert(deviceTag);
+            CurrentUnitOfWork.SaveChanges();
+            return ObjectMapper.Map<DeviceTagDto>(result);
         }
 
         public DeviceTagDto Update(CreateDeviceTagDto input)
         {
-            throw new NotImplementedException();
+            var deviceQuery = _deviceRepository.GetAll().Where(d => d.DeviceName == input.DeviceName);
+            if (!deviceQuery.Any())
+            {
+                throw new ApplicationException("该设备不存在");
+            }
+
+            var device = deviceQuery.FirstOrDefault();
+            var deviceTag = new DeviceTag()
+            {
+                TagId = input.TagId,
+                Device = device,
+                Id = input.Id
+            };
+            var result = _deviceTagRepository.Update(deviceTag);
+            CurrentUnitOfWork.SaveChanges();
+            return ObjectMapper.Map<DeviceTagDto>(result);
+
         }
+
+        public void Delete(EntityDto<int> input)
+        {
+            var entity = _deviceTagRepository.Get(input.Id);
+            _deviceTagRepository.Delete(entity);
+        }
+
     }
 }

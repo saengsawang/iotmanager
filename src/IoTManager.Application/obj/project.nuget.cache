@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WK5lCbloB3oY2Cm57n3PbLsMq62oE1xmhwBBzJBonu8z9goePxI6o2cxEzvx29kJ5LbbTCbfdqVMXARudJt0kg==",
+  "dgSpecHash": "LpVBUq9MmM+Uf69yCZYzcyqN2sQRTIlA94vqgUZB7FIG0FnPwK1CscbSv0y+aek4jPnXivHnfUnF8ezcSxFZmA==",
   "success": true,
-  "projectFilePath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Application/IoTManager.Application.csproj",
+  "projectFilePath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Application/IoTManager.Application.csproj",
   "expectedPackageFiles": [
     "/Users/s9rt1v/.nuget/packages/abp/5.1.0/abp.5.1.0.nupkg.sha512",
     "/Users/s9rt1v/.nuget/packages/abp.aspnetcore/5.1.0/abp.aspnetcore.5.1.0.nupkg.sha512",

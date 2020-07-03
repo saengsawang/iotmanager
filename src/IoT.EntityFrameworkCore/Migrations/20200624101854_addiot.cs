@@ -19,7 +19,7 @@ namespace IoT.Migrations
                     Remark = table.Column<string>(maxLength: 255, nullable: true),
                     Longitude = table.Column<decimal>(type: "decimal(11,2)", nullable: true),
                     Latitude = table.Column<decimal>(type: "decimal(11,2)", nullable: true),
-                    CreationTime = table.Column<DateTime>(nullable: false),
+                    creationTime = table.Column<DateTime>(nullable: false),
                     CreatorUserId = table.Column<long>(nullable: true),
                     LastModificationTime = table.Column<DateTime>(nullable: true),
                     LastModifierUserId = table.Column<long>(nullable: true),

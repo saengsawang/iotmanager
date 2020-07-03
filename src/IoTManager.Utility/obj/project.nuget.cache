@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fFeVq1ivhbWAC/99cAfXFBY7TbCaYUrGbUc4J6Iu7iEnfeCt6lYbJAok2OqZd05SwDL+8MOhj5HGIejziVVUXQ==",
+  "dgSpecHash": "VqBJBo4hyS/NUn6uXPcPAP8N3KCFee9+gNoHacZUPRPy18r0JojJRfGN7MszVswHOCimJed9ECNnGzToLgk+nQ==",
   "success": true,
-  "projectFilePath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoTManager.Utility/IoTManager.Utility.csproj",
+  "projectFilePath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/IoTManager.Utility.csproj",
   "expectedPackageFiles": [
     "/Users/s9rt1v/.nuget/packages/abp/5.1.0/abp.5.1.0.nupkg.sha512",
     "/Users/s9rt1v/.nuget/packages/abp.entityframework.common/5.1.0/abp.entityframework.common.5.1.0.nupkg.sha512",

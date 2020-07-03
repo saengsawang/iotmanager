@@ -7,7 +7,7 @@ using L._52ABP.Application.Dtos;
 
 namespace IoT.Application.DeviceAppService.DeviceService
 {
-    interface IDeviceAppService:ICrudAppService<DeviceDto,int, PagedSortedAndFilteredInputDto, CreateDeviceDto>
+    public interface IDeviceAppService:ICrudAppService<DeviceDto,int, PagedSortedAndFilteredInputDto, CreateDeviceDto>
     {
     }
 }

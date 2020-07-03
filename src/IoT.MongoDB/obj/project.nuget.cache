@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0N97EgGMypkSVdPInhNjfzv+TKwbNer0Z2HmbxlU3DjM+AsRDwBQ4l7SR+02YUPhBeR/X1Q2LGmJESL2FqjJmA==",
+  "dgSpecHash": "EptRLFJosYzT7Mquq0A8mA4mRunVXxMvwqvDHSBGNdo70T8Lmbif0Bo3HKhoDhHY8wcNhW3mpazlE7MuLJr22w==",
   "success": true,
-  "projectFilePath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.MongoDB/IoT.MongoDB.csproj",
+  "projectFilePath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/IoT.MongoDB.csproj",
   "expectedPackageFiles": [
     "/Users/s9rt1v/.nuget/packages/abp/5.1.0/abp.5.1.0.nupkg.sha512",
     "/Users/s9rt1v/.nuget/packages/abp.mongodb/5.1.0/abp.mongodb.5.1.0.nupkg.sha512",

@@ -46,7 +46,7 @@ namespace IoT.Application.DeviceAppService
                 throw new ApplicationException("Tag已存在");
             }
 
-            var tag = ObjectMapper.Map<Tag>(tagQuery.FirstOrDefault());
+            var tag = ObjectMapper.Map<Tag>(input);
             var result = _tagRepository.Insert(tag);
             CurrentUnitOfWork.SaveChanges();
             return ObjectMapper.Map<TagDto>(result);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.MongoDB/IoT.MongoDB.csproj": {}
+    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/IoT.MongoDB.csproj": {}
   },
   "projects": {
-    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.MongoDB/IoT.MongoDB.csproj": {
+    "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/IoT.MongoDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.MongoDB/IoT.MongoDB.csproj",
+        "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/IoT.MongoDB.csproj",
         "projectName": "IoT.MongoDB",
-        "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.MongoDB/IoT.MongoDB.csproj",
+        "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/IoT.MongoDB.csproj",
         "packagesPath": "/Users/s9rt1v/.nuget/packages/",
-        "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager/src/IoT.MongoDB/obj/",
+        "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

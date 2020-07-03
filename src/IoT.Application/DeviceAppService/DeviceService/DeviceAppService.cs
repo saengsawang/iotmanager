@@ -11,10 +11,11 @@ using IoT.Application.DeviceAppService.DeviceService.Dto;
 using IoT.Core;
 using L._52ABP.Application.Dtos;
 using Microsoft.EntityFrameworkCore;
+using Abp.Domain.Entities;
 
 namespace IoT.Application.DeviceAppService.DeviceService
 {
-    class DeviceAppService : ApplicationService, IDeviceAppService
+    public class DeviceAppService : ApplicationService, IDeviceAppService
     {
         private readonly IRepository<Device, int> _deviceRepository;
         private readonly IRepository<DeviceType, int> _deviceTypeRepository;
@@ -58,14 +59,12 @@ namespace IoT.Application.DeviceAppService.DeviceService
                .Include(d => d.Gateway.Workshop)
                .Include(d => d.Gateway.Workshop.Factory)
                .Include(d => d.Gateway.Workshop.Factory.City)
-               .Include(d => d.Gateway.GatewayType)
                .Include(d => d.DeviceType);
             var total = query.Count();
             var result = input.Sorting != null
                 ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()
                 : query.PageBy(input).ToList();
             return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
-            throw new NotImplementedException();
         }
 
         public DeviceDto Create(CreateDeviceDto input)
@@ -176,6 +175,10 @@ namespace IoT.Application.DeviceAppService.DeviceService
         public void Delete(EntityDto<int> input)
         {
             var entity = _deviceRepository.Get(input.Id);
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ArgumentException("设备不存在或已删除");
+            }
             _deviceRepository.Delete(entity);
         }
     }
