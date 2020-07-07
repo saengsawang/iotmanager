@@ -10,6 +10,9 @@ using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
 using IoT.Application.WorkshopAppService.DTO;
 using IoT.Core;
+using IoT.Core.Cities;
+using IoT.Core.Factories.Entity;
+using IoT.Core.Workshops.Entity;
 using L._52ABP.Application.Dtos;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,11 +20,11 @@ namespace IoT.Application.WorkshopAppService
 {
     public class WorkshopAppService:ApplicationService,IWorkshopAppService
     {
-        private readonly IRepository<Workshop, int> _workshopRepository;
-        private readonly IRepository<Factory, int> _factoryRepository;
-        private readonly IRepository<City, int> _cityRepository;
+        private readonly IWorkshopRepository _workshopRepository;
+        private readonly IFactoryRepository _factoryRepository;
+        private readonly ICityRepository _cityRepository;
 
-        public WorkshopAppService(IRepository<Workshop, int> workshopRepository, IRepository<Factory, int> factoryRepository, IRepository<City, int> cityRepository)
+        public WorkshopAppService(IWorkshopRepository workshopRepository, IFactoryRepository factoryRepository, ICityRepository cityRepository)
         {
             _workshopRepository = workshopRepository;
             _factoryRepository = factoryRepository;
@@ -34,12 +37,16 @@ namespace IoT.Application.WorkshopAppService
             var query = _workshopRepository.GetAllIncluding(w => w.Factory)
                 .Include(w => w.Factory.City).Where(w => w.Id == input.Id);
             var entity = query.FirstOrDefault();
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该设备不存在或已被删除");
+            }
             return ObjectMapper.Map<WorkshopDto>(entity);
         }
 
         public PagedResultDto<WorkshopDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
-            var query = _workshopRepository.GetAllIncluding(w=>w.Factory)
+            var query = _workshopRepository.GetAllIncluding(w=>w.Factory).Where(w=>w.IsDeleted==false)
                 .Include(w=>w.Factory.City);
             var total = query.Count();
             var result = input.Sorting != null
@@ -104,7 +111,7 @@ namespace IoT.Application.WorkshopAppService
         public void Delete(EntityDto<int> input)
         {
             var entity = _workshopRepository.Get(input.Id);
-            _workshopRepository.Delete(entity);
+            _workshopRepository.AffiliateDelete(entity);
         }
     }
 }

@@ -1,0 +1,9 @@
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/bin/Debug/netcoreapp3.1/IoTManager.Utility.deps.json
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/bin/Debug/netcoreapp3.1/IoTManager.Utility.dll
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/bin/Debug/netcoreapp3.1/IoTManager.Utility.pdb
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/obj/Debug/netcoreapp3.1/IoTManager.Utility.csprojAssemblyReference.cache
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/obj/Debug/netcoreapp3.1/IoTManager.Utility.AssemblyInfoInputs.cache
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/obj/Debug/netcoreapp3.1/IoTManager.Utility.AssemblyInfo.cs
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/obj/Debug/netcoreapp3.1/IoTManager.Utility.csproj.CoreCompileInputs.cache
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/obj/Debug/netcoreapp3.1/IoTManager.Utility.dll
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Utility/obj/Debug/netcoreapp3.1/IoTManager.Utility.pdb

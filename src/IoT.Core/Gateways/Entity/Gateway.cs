@@ -44,5 +44,6 @@ namespace IoT.Core
         public bool IsDeleted { get; set; }
         public DateTime? DeletionTime { get; set; }
         public long? DeleterUserId { get; set; }
+
     }
 }

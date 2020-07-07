@@ -20,6 +20,7 @@ using System.Linq.Dynamic.Core;
 using System.Linq;
 using Abp.Linq.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Abp.Domain.Repositories;
 
 namespace IoT.Application.CityAppService
 {
@@ -38,12 +39,16 @@ namespace IoT.Application.CityAppService
         public CityDto Get(EntityDto<int> input)
         {
             var entity = _cityRepository.Get(input.Id);
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该设备不存在或已被删除");
+            }
             return entity.MapTo<CityDto>();
         }
 
         public PagedResultDto<CityDto> GetAll(CityPagedSortedAndFilteredDto input)
         {
-            var query = _cityRepository.GetAll();
+            var query = _cityRepository.GetAll().Where(c=>c.IsDeleted==false);
             var total = query.Count();
             var result = input.Sorting != null
                 ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()
@@ -113,11 +118,13 @@ namespace IoT.Application.CityAppService
         {
             /*删除城市，城市的实验楼提示是否删除*/
             var city = _cityRepository.Get(input.Id);
+            
             if (city.IsNullOrDeleted())
             {
                 throw new ArgumentException("城市不存在或已删除");
             }
             _cityManager.Delete(city);
         }
+
     }
 }

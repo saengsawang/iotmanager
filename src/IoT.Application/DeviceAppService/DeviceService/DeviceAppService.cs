@@ -49,12 +49,16 @@ namespace IoT.Application.DeviceAppService.DeviceService
                .Include(d => d.Gateway.GatewayType)
                .Include(d => d.DeviceType);
             var entity = query.FirstOrDefault();
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该设备不存在或已被删除");
+            }
             return ObjectMapper.Map<DeviceDto>(entity);
         }
 
         public PagedResultDto<DeviceDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
-            var query = _deviceRepository.GetAll()
+            var query = _deviceRepository.GetAll().Where(d=>d.IsDeleted==false)
                .Include(d => d.Gateway)
                .Include(d => d.Gateway.Workshop)
                .Include(d => d.Gateway.Workshop.Factory)

@@ -29,7 +29,7 @@ namespace IoT.Application.DeviceAppService
         public DeviceTagDto Get(EntityDto<int> input)
         {
             var query = _deviceTagRepository.GetAllIncluding(d => d.Device).Where(d => d.Id == input.Id);
-            var entity = query.FirstOrDefault(); 
+            var entity = query.FirstOrDefault();
             return ObjectMapper.Map<DeviceTagDto>(entity);
         }
 

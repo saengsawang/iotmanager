@@ -29,12 +29,16 @@ namespace IoT.Application.FieldAppService
         {
            var query = _fieldRepository.GetAllIncluding(f => f.Device).Where(f => f.Id == input.Id);
             var entity = query.FirstOrDefault();
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该设备不存在或已被删除");
+            }
             return ObjectMapper.Map<FieldDto>(entity);
         }
 
         public PagedResultDto<FieldDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
-            var query = _fieldRepository.GetAll().Include(f=>f.Device);
+            var query = _fieldRepository.GetAll().Where(f=>f.IsDeleted==false).Include(f=>f.Device);
             var total = query.Count();
             var result = input.Sorting != null
                 ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()

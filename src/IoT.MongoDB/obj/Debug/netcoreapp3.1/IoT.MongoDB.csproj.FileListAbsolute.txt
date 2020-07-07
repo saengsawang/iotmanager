@@ -1,0 +1,9 @@
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/bin/Debug/netcoreapp3.1/IoT.MongoDB.deps.json
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/bin/Debug/netcoreapp3.1/IoT.MongoDB.dll
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/bin/Debug/netcoreapp3.1/IoT.MongoDB.pdb
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/obj/Debug/netcoreapp3.1/IoT.MongoDB.csprojAssemblyReference.cache
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/obj/Debug/netcoreapp3.1/IoT.MongoDB.AssemblyInfoInputs.cache
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/obj/Debug/netcoreapp3.1/IoT.MongoDB.AssemblyInfo.cs
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/obj/Debug/netcoreapp3.1/IoT.MongoDB.csproj.CoreCompileInputs.cache
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/obj/Debug/netcoreapp3.1/IoT.MongoDB.dll
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.MongoDB/obj/Debug/netcoreapp3.1/IoT.MongoDB.pdb

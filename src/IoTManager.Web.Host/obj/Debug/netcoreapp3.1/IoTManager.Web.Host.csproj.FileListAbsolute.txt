@@ -454,3 +454,4 @@
 /Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Web.Host/obj/Debug/netcoreapp3.1/IoTManager.Web.Host.dll
 /Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Web.Host/obj/Debug/netcoreapp3.1/IoTManager.Web.Host.pdb
 /Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Web.Host/obj/Debug/netcoreapp3.1/IoTManager.Web.Host.genruntimeconfig.cache
+/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Web.Host/obj/Debug/netcoreapp3.1/IoTManager.Web.Host.MvcApplicationPartsAssemblyInfo.cs

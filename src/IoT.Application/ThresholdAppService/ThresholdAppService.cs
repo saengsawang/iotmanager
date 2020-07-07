@@ -31,12 +31,16 @@ namespace IoT.Application.ThresholdAppService
         {
             var query = _thresholdRepository.GetAllIncluding(t=>t.Field).Include(t=>t.Severity).Where(t => t.Id == input.Id);
             var entity = query.FirstOrDefault(); ;
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该设备不存在或已被删除");
+            }
             return ObjectMapper.Map<ThresholdDto>(entity);
         }
 
         public PagedResultDto<ThresholdDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
-            var query = _thresholdRepository.GetAll().Include(t => t.Field)
+            var query = _thresholdRepository.GetAll().Where(t=>t.IsDeleted==false).Include(t => t.Field)
                 .Include(t=>t.Severity);
             var total = query.Count();
             var result = input.Sorting != null

@@ -10,6 +10,8 @@ using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
 using IoT.Application.FactoryAppService.DTO;
 using IoT.Core;
+using IoT.Core.Cities;
+using IoT.Core.Factories.Entity;
 using L._52ABP.Application.Dtos;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,10 +19,9 @@ namespace IoT.Application.FactoryAppService
 {
     public class FactoryAppService:ApplicationService,IFactoryAppService
     {
-        private readonly IRepository<Factory, int> _factoryRepository;
-        private readonly IRepository<City, int> _cityRepository;
-
-        public FactoryAppService(IRepository<Factory, int> factoryRepository, IRepository<City, int> cityRepository)
+        private readonly IFactoryRepository _factoryRepository;
+        private readonly ICityRepository _cityRepository;
+        public FactoryAppService(IFactoryRepository factoryRepository, ICityRepository cityRepository)
         {
             _factoryRepository = factoryRepository;
             _cityRepository = cityRepository;
@@ -30,13 +31,17 @@ namespace IoT.Application.FactoryAppService
         {
             var query = _factoryRepository.GetAllIncluding(e => e.City).Where(e => e.Id == input.Id);
             var entity = query.FirstOrDefault();
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该设备不存在或已被删除");
+            }
             var result = ObjectMapper.Map<FactoryDto>(entity);
             return result;
         }
 
         public PagedResultDto<FactoryDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
-            var query = _factoryRepository.GetAllIncluding(q => q.City);
+            var query = _factoryRepository.GetAllIncluding(q => q.City).Where(f=>f.IsDeleted==false);
             var total = query.Count();
             var result = input.Sorting != null
                 ? query.OrderBy(input.Sorting).AsNoTracking<Factory>().PageBy(input).ToList()
@@ -79,7 +84,7 @@ namespace IoT.Application.FactoryAppService
         public void Delete(EntityDto<int> input)
         {
             var entity = _factoryRepository.Get(input.Id);
-            _factoryRepository.Delete(entity);
+            _factoryRepository.AffiliateDelete(entity);
         }
     }
 }

@@ -7,5 +7,6 @@ namespace IoT.Core.Cities
     public interface ICityRepository:IRepository<City,int>
     {
         City Create(City entity);
+        void AffiliateDelete(City entity);
     }
 }

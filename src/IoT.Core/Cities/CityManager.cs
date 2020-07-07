@@ -16,7 +16,7 @@ namespace IoT.Core.Cities
 
         public void Delete(City entity)
         {
-            _cityRepositories.Delete(entity);
+            _cityRepositories.AffiliateDelete(entity);
         }
 
         public City Update(City entity)

@@ -5,14 +5,30 @@ using System.Text;
 using Abp.EntityFrameworkCore;
 using IoT.Core;
 using IoT.Core.Cities;
+using IoT.Core.Factories.Entity;
 using Microsoft.AspNetCore.Http;
 
 namespace IoT.EntityFrameworkCore.Repositories
 {
     public class CityRepository:IoTRepositoryBase<City,int>,ICityRepository
     {
-        public CityRepository(IDbContextProvider<IoTDbContext> dbContextProvider) : base(dbContextProvider)
+        private readonly IFactoryRepository _factoryRepository;
+        public CityRepository(IFactoryRepository factoryRepository,IDbContextProvider<IoTDbContext> dbContextProvider) : base(dbContextProvider)
         {
+            _factoryRepository = factoryRepository;
+        }
+
+        public void AffiliateDelete(City entity)
+        {
+            var query = _factoryRepository.GetAll().Where(f => f.CityId == entity.Id);
+            if (query.Any())
+            {
+                foreach (var factory in query)
+                {
+                    _factoryRepository.Delete(factory);
+                }
+            }
+            Delete(entity);
         }
 
         public City Create(City entity)

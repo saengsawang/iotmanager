@@ -1,15 +1,19 @@
 ﻿<Properties StartupConfiguration="{38E184BD-E874-4633-A947-AED4FDB73F40}|Default">
   <MonoDevelop.Ide.ItemProperties.src.IoTManager.Web.Host PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/IoT.Application/ThresholdAppService/ThresholdAppService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/IoT.Application/FactoryAppService/FactoryAppService.cs">
     <Files>
-      <File FileName="src/IoT.Application/DeviceAppService/TagService/TagAppService.cs" Line="51" Column="1" />
-      <File FileName="src/IoT.Application/DeviceAppService/DeviceTagService/DeviceTagAppService.cs" />
-      <File FileName="src/IoT.Application/FieldAppService/FieldAppService.cs" />
-      <File FileName="src/IoT.Application/ThresholdAppService/DTO/ThresholdDto.cs" />
-      <File FileName="src/IoT.Application/ThresholdAppService/ThresholdAppService.cs" Line="32" Column="95" />
-      <File FileName="src/IoT.Application/WorkshopAppService/WorkshopAppService.cs" />
-      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/DeviceAppService.cs" />
-      <File FileName="src/IoT.Application/GatewayAppService/GatewayAppService.cs" />
+      <File FileName="src/IoT.Application/DeviceAppService/DeviceTagService/DeviceTagAppService.cs" Line="32" Column="49" IsPinned="True" />
+      <File FileName="src/IoT.Core/Cities/Entity/City.cs" Line="12" Column="47" />
+      <File FileName="src/IoT.Core/Devices/Entity/DeviceTag.cs" Line="12" Column="41" />
+      <File FileName="src/IoT.Core/Devices/Entity/DeviceType.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Core/Devices/Entity/Tag.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Application/FieldAppService/FieldAppService.cs" Line="35" Column="14" />
+      <File FileName="src/IoT.Application/ThresholdAppService/SevetityAppService/SeverityAppService.cs" Line="34" Column="53" />
+      <File FileName="src/IoT.Application/DeviceAppService/OnlineTimeDailyService/OnlineTimeDailyAppService.cs" Line="37" Column="60" />
+      <File FileName="src/IoT.Core/Devices/Entity/Device.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Core/Devices/Entity/OnlineTimeDaily.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Application/DeviceDataAppService/DeviceDataAppService.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Application/FactoryAppService/FactoryAppService.cs" Line="37" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,53 +22,45 @@
             <Node name="src" expanded="True">
               <Node name="IoT" expanded="True">
                 <Node name="IoT.Application" expanded="True">
-                  <Node name="Dependencies" expanded="True" />
                   <Node name="CityAppService" expanded="True">
                     <Node name="DTO" expanded="True" />
                   </Node>
                   <Node name="DeviceAppService" expanded="True">
                     <Node name="DeviceService" expanded="True" />
-                    <Node name="DeviceTagService" expanded="True">
-                      <Node name="Dto" expanded="True" />
-                    </Node>
-                    <Node name="DeviceTypeService" expanded="True" />
-                    <Node name="OnlineTimeDailyService" expanded="True">
-                      <Node name="Dto" expanded="True" />
-                    </Node>
+                    <Node name="DeviceTagService" expanded="True" />
+                    <Node name="OnlineTimeDailyService" expanded="True" />
                     <Node name="TagService" expanded="True" />
                   </Node>
-                  <Node name="DeviceDataAppService" expanded="True">
-                    <Node name="Dto" expanded="True" />
+                  <Node name="DeviceDataAppService" expanded="True" />
+                  <Node name="FactoryAppService" expanded="True">
+                    <Node name="FactoryAppService.cs" selected="True" />
                   </Node>
-                  <Node name="FieldAppService" expanded="True">
-                    <Node name="DTO" expanded="True" />
-                  </Node>
+                  <Node name="FieldAppService" expanded="True" />
                   <Node name="GatewayAppService" expanded="True">
                     <Node name="DTO" expanded="True" />
                   </Node>
                   <Node name="ThresholdAppService" expanded="True">
-                    <Node name="DTO" expanded="True" />
-                    <Node name="ThresholdAppService.cs" selected="True" />
+                    <Node name="SevetityAppService" expanded="True" />
                   </Node>
-                  <Node name="WorkshopAppService" expanded="True">
-                    <Node name="DTO" expanded="True" />
-                  </Node>
+                  <Node name="WorkshopAppService" expanded="True" />
                 </Node>
                 <Node name="IoT.Core" expanded="True">
-                  <Node name="Dependencies" expanded="True">
-                    <Node name="PackageDependencies" expanded="True" />
+                  <Node name="Cities" expanded="True">
+                    <Node name="Entity" expanded="True" />
                   </Node>
                   <Node name="Devices" expanded="True">
                     <Node name="Entity" expanded="True" />
                   </Node>
-                  <Node name="Fields" expanded="True">
-                    <Node name="Entity" expanded="True" />
-                  </Node>
-                  <Node name="Thresholds" expanded="True">
+                  <Node name="Gateways" expanded="True">
                     <Node name="Entity" expanded="True" />
                   </Node>
                   <Node name="Workshops" expanded="True">
                     <Node name="Entity" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="IoT.EntityFrameworkCore" expanded="True">
+                  <Node name="EntityFrameworkCore" expanded="True">
+                    <Node name="Repositories" expanded="True" />
                   </Node>
                 </Node>
                 <Node name="IoT.MongoDB" expanded="True">
@@ -72,16 +68,14 @@
                 </Node>
               </Node>
               <Node name="IoTManager" expanded="True">
-                <Node name="IoTManager.Application" expanded="True" />
+                <Node name="IoTManager.Application" expanded="True">
+                  <Node name="Users" expanded="True" />
+                </Node>
                 <Node name="IoTManager.Core" expanded="True" />
                 <Node name="IoTManager.EntityFrameworkCore" expanded="True" />
               </Node>
-              <Node name="IoTManager.Web.Core" expanded="True" />
               <Node name="IoTManager.Web.Host" expanded="True">
-                <Node name="Controllers" expanded="True" />
-                <Node name="Properties" expanded="True" />
                 <Node name="Startup" expanded="True" />
-                <Node name="appsettings.json" expanded="True" />
               </Node>
             </Node>
           </Node>
