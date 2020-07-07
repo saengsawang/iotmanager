@@ -58,6 +58,18 @@ namespace IoT.Application.FactoryAppService
             {
                 throw new ApplicationException("城市不存在");
             }
+            var factoryQuery = _factoryRepository.GetAll().Where(f => f.FactoryName == input.FactoryName);
+            var factory = factoryQuery.FirstOrDefault();
+            if (factory!=null)
+            {
+                if(factory.IsDeleted == true)
+                {
+                    factory.IsDeleted = false;
+                    var result_old = _factoryRepository.Update(factory);
+                    CurrentUnitOfWork.SaveChanges();
+                    return ObjectMapper.Map<FactoryDto>(result_old);
+                }
+            }
             var entity = ObjectMapper.Map<Factory>(input);
             entity.City = city;
             var result = _factoryRepository.Insert(entity);

@@ -91,6 +91,14 @@ namespace IoT.Application.CityAppService
                 Latitude = decimal.Parse(location[1])
             };
             var city = _cityRepository.GetAll().Where(c => c.CityCode == entity.CityCode);
+            if (city.Any()&&(city.FirstOrDefault().IsDeleted==true))
+            {
+                var city_old = city.FirstOrDefault();
+                city_old.IsDeleted = false;
+                var result_old = _cityRepository.Update(city_old);
+                CurrentUnitOfWork.SaveChanges();
+                return result_old.MapTo<CityDto>();
+            }
             if (city.Any())
             {
                 throw new ApplicationException("城市已存在！");

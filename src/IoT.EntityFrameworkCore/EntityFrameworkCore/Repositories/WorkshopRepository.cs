@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using Abp.EntityFrameworkCore;
 using IoT.Core;
@@ -18,12 +19,17 @@ namespace IoT.EntityFrameworkCore.Repositories
         public void AffiliateDelete(Workshop entity)
         {
             var query = _gatewayRepository.GetAll().Where(g=>g.WorkshopId == entity.Id);
+            ArrayList list = new ArrayList(query.Count());
             if (query.Any())
             {
                 foreach (var gateway in query)
                 {
-                    _gatewayRepository.AffiliateDelete(gateway);
+                    list.Add((Gateway)gateway);
                 }
+            }
+            foreach (var gateway in list)
+            {
+                _gatewayRepository.AffiliateDelete((Gateway)gateway);
             }
             Delete(entity);
         }

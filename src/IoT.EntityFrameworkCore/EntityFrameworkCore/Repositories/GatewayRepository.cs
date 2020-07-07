@@ -6,7 +6,7 @@ using IoT.Core.Gateways.Entity;
 using Abp.Linq.Extensions;
 using System.Linq;
 using System.Linq.Dynamic.Core;
-
+using System.Collections;
 
 namespace IoT.EntityFrameworkCore.Repositories
 {
@@ -21,12 +21,17 @@ namespace IoT.EntityFrameworkCore.Repositories
         public void AffiliateDelete(Gateway entity)
         {
             var query = _deviceRepository.GetAll().Where(d=>d.GatewayId==entity.Id);
+            ArrayList list = new ArrayList(query.Count());
             if (query.Any())
             {
-                foreach(var device in query)
+                foreach (var device in query)
                 {
-                    _deviceRepository.Delete(device);
+                    list.Add((Device)device);
                 }
+            }
+            foreach (var device in list)
+            {
+                _deviceRepository.Delete((Device)device);
             }
             Delete(entity);
         }

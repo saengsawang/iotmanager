@@ -71,12 +71,9 @@ namespace IoT.Application.GatewayAppService
             if (query.Any()&&gateway_old.IsDeleted==false)
             {
                 throw new ApplicationException("网关已存在");
-            }else if (gateway_old.IsDeleted==true)
-            {
-                gateway_old.IsDeleted = false;
-                var result_1 = _gatewayRepository.Update(gateway_old);
-                return ObjectMapper.Map<GatewayDto>(result_1);
             }
+
+            
             
 
             var workshopQuery = _workshopRepository.GetAllIncluding().Where(w => w.WorkshopName == input.WorkshopName)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,12 +22,17 @@ namespace IoT.EntityFrameworkCore.Repositories
         public void AffiliateDelete(City entity)
         {
             var query = _factoryRepository.GetAll().Where(f => f.CityId == entity.Id);
+            ArrayList list = new ArrayList(query.Count());
             if (query.Any())
             {
                 foreach (var factory in query)
                 {
-                    _factoryRepository.Delete(factory);
+                    list.Add((Factory)factory);
                 }
+            }
+            foreach(var factory in list)
+            {
+                _factoryRepository.AffiliateDelete((Factory)factory);
             }
             Delete(entity);
         }
