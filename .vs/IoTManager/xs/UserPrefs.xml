@@ -1,19 +1,21 @@
 ﻿<Properties StartupConfiguration="{38E184BD-E874-4633-A947-AED4FDB73F40}|Default">
   <MonoDevelop.Ide.ItemProperties.src.IoTManager.Web.Host PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/IoT.Application/FactoryAppService/FactoryAppService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/IoT.Application/ThresholdAppService/ThresholdAppService.cs">
     <Files>
       <File FileName="src/IoT.Application/DeviceAppService/DeviceTagService/DeviceTagAppService.cs" Line="32" Column="49" IsPinned="True" />
       <File FileName="src/IoT.Core/Cities/Entity/City.cs" Line="12" Column="47" />
       <File FileName="src/IoT.Core/Devices/Entity/DeviceTag.cs" Line="12" Column="41" />
       <File FileName="src/IoT.Core/Devices/Entity/DeviceType.cs" Line="1" Column="1" />
       <File FileName="src/IoT.Core/Devices/Entity/Tag.cs" Line="1" Column="1" />
-      <File FileName="src/IoT.Application/FieldAppService/FieldAppService.cs" Line="35" Column="14" />
+      <File FileName="src/IoT.Application/FieldAppService/FieldAppService.cs" Line="36" Column="14" />
       <File FileName="src/IoT.Application/ThresholdAppService/SevetityAppService/SeverityAppService.cs" Line="34" Column="53" />
       <File FileName="src/IoT.Application/DeviceAppService/OnlineTimeDailyService/OnlineTimeDailyAppService.cs" Line="37" Column="60" />
       <File FileName="src/IoT.Core/Devices/Entity/Device.cs" Line="1" Column="1" />
       <File FileName="src/IoT.Core/Devices/Entity/OnlineTimeDaily.cs" Line="1" Column="1" />
       <File FileName="src/IoT.Application/DeviceDataAppService/DeviceDataAppService.cs" Line="1" Column="1" />
       <File FileName="src/IoT.Application/FactoryAppService/FactoryAppService.cs" Line="37" Column="14" />
+      <File FileName="src/IoT.Core/Fields/Entity/Field.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Application/ThresholdAppService/ThresholdAppService.cs" Line="38" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,15 +34,14 @@
                     <Node name="TagService" expanded="True" />
                   </Node>
                   <Node name="DeviceDataAppService" expanded="True" />
-                  <Node name="FactoryAppService" expanded="True">
-                    <Node name="FactoryAppService.cs" selected="True" />
-                  </Node>
+                  <Node name="FactoryAppService" expanded="True" />
                   <Node name="FieldAppService" expanded="True" />
                   <Node name="GatewayAppService" expanded="True">
                     <Node name="DTO" expanded="True" />
                   </Node>
                   <Node name="ThresholdAppService" expanded="True">
                     <Node name="SevetityAppService" expanded="True" />
+                    <Node name="ThresholdAppService.cs" selected="True" />
                   </Node>
                   <Node name="WorkshopAppService" expanded="True" />
                 </Node>
@@ -49,6 +50,9 @@
                     <Node name="Entity" expanded="True" />
                   </Node>
                   <Node name="Devices" expanded="True">
+                    <Node name="Entity" expanded="True" />
+                  </Node>
+                  <Node name="Fields" expanded="True">
                     <Node name="Entity" expanded="True" />
                   </Node>
                   <Node name="Gateways" expanded="True">

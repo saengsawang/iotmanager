@@ -12,6 +12,7 @@ using L._52ABP.Application.Dtos;
 using Microsoft.EntityFrameworkCore;
 using IoT.Application.FieldAppService.DTO;
 using IoT.Application.ThresholdAppService.DTO;
+using Abp.Domain.Entities;
 
 namespace IoT.Application.ThresholdAppService
 {

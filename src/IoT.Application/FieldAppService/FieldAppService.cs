@@ -12,6 +12,7 @@ using L._52ABP.Application.Dtos;
 using Microsoft.EntityFrameworkCore;
 using IoT.Application.FieldAppService.DTO;
 using AutoMapper;
+using Abp.Domain.Entities;
 
 namespace IoT.Application.FieldAppService
 {
