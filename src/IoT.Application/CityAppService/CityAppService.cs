@@ -134,5 +134,14 @@ namespace IoT.Application.CityAppService
             _cityManager.Delete(city);
         }
 
+        public void BatchDelete(int[] inputs)
+        {
+            foreach (var input in inputs)
+            {
+                var entity = _cityRepository.Get(input);
+                _cityManager.Delete(entity);
+            }
+        }
+
     }
 }

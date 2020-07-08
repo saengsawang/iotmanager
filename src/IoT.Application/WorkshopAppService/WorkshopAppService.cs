@@ -11,8 +11,8 @@ using Abp.Linq.Extensions;
 using IoT.Application.WorkshopAppService.DTO;
 using IoT.Core;
 using IoT.Core.Cities;
-using IoT.Core.Factories.Entity;
-using IoT.Core.Workshops.Entity;
+using IoT.Core.Factories;
+using IoT.Core.Workshops;
 using L._52ABP.Application.Dtos;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,12 +23,17 @@ namespace IoT.Application.WorkshopAppService
         private readonly IWorkshopRepository _workshopRepository;
         private readonly IFactoryRepository _factoryRepository;
         private readonly ICityRepository _cityRepository;
+        private readonly IWorkshopManager _workshopManager;
 
-        public WorkshopAppService(IWorkshopRepository workshopRepository, IFactoryRepository factoryRepository, ICityRepository cityRepository)
+        public WorkshopAppService(IWorkshopRepository workshopRepository,
+            IFactoryRepository factoryRepository,
+            ICityRepository cityRepository,
+            IWorkshopManager workshopManager)
         {
             _workshopRepository = workshopRepository;
             _factoryRepository = factoryRepository;
             _cityRepository = cityRepository;
+            _workshopManager = workshopManager;
         }
 
 
@@ -57,6 +62,20 @@ namespace IoT.Application.WorkshopAppService
 
         public WorkshopDto Create(CreateWorkshopDto input)
         {
+            var workshopQuery = _workshopRepository.GetAll().Where(w => w.WorkshopName == input.WorkshopName);
+            if ((workshopQuery.Any()) && (workshopQuery.FirstOrDefault().IsDeleted == true))
+            {
+                var entity_old = workshopQuery.FirstOrDefault();
+                entity_old.IsDeleted = false;
+                var result_old = _workshopRepository.Update(entity_old);
+                CurrentUnitOfWork.SaveChanges();
+                return ObjectMapper.Map<WorkshopDto>(result_old);
+            }
+            if (workshopQuery.Any())
+            {
+                throw new ApplicationException("WorkshopName重复");
+            }
+
             var cityQuery = _cityRepository.GetAll().Where(c => c.CityName == input.CityName);
             var city = cityQuery.FirstOrDefault();
             if (city.IsNullOrDeleted())
@@ -68,14 +87,10 @@ namespace IoT.Application.WorkshopAppService
             var factory = factoryQuery.FirstOrDefault();
             if (factory.IsNullOrDeleted())
             {
-                throw new ApplicationException("Workshop不存在或输入错误");
+                throw new ApplicationException("Factory不存在或输入错误");
             }
 
-            var workshopQuery = _workshopRepository.GetAll().Where(w => w.WorkshopName == input.WorkshopName);
-            if (workshopQuery.Any())
-            {
-                throw new ApplicationException("WorkshopName重复");
-            }
+            
 
             var entity = ObjectMapper.Map<Workshop>(input);
             entity.Factory = factory;
@@ -111,7 +126,16 @@ namespace IoT.Application.WorkshopAppService
         public void Delete(EntityDto<int> input)
         {
             var entity = _workshopRepository.Get(input.Id);
-            _workshopRepository.AffiliateDelete(entity);
+            _workshopManager.Delete(entity);
+        }
+
+        public void BatchDelete(int[] inputs)
+        {
+            foreach (var input in inputs)
+            {
+                var entity = _workshopRepository.Get(input);
+                _workshopManager.Delete(entity);
+            }
         }
     }
 }

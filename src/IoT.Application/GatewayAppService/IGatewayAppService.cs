@@ -9,5 +9,7 @@ namespace IoT.Application.GatewayAppService
 {
     public interface IGatewayAppService:ICrudAppService<GatewayDto,int,PagedSortedAndFilteredInputDto,CreateGatewayDto,UpdateGatewayDto>
     {
+        void BatchDelete(int[] inputs);
     }
 }
+

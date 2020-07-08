@@ -6,22 +6,22 @@ using System.Text;
 using Abp.EntityFrameworkCore;
 using IoT.Core;
 using IoT.Core.Cities;
-using IoT.Core.Factories.Entity;
+using IoT.Core.Factories;
 using Microsoft.AspNetCore.Http;
 
 namespace IoT.EntityFrameworkCore.Repositories
 {
     public class CityRepository:IoTRepositoryBase<City,int>,ICityRepository
     {
-        private readonly IFactoryRepository _factoryRepository;
-        public CityRepository(IFactoryRepository factoryRepository,IDbContextProvider<IoTDbContext> dbContextProvider) : base(dbContextProvider)
+        private readonly IFactoryManager _factoryManager;
+        public CityRepository(IFactoryManager factoryManager,IDbContextProvider<IoTDbContext> dbContextProvider) : base(dbContextProvider)
         {
-            _factoryRepository = factoryRepository;
+            _factoryManager = factoryManager;
         }
 
         public void AffiliateDelete(City entity)
         {
-            var query = _factoryRepository.GetAll().Where(f => f.CityId == entity.Id);
+            var query = _factoryManager.GetAll().Where(f => f.CityId == entity.Id);
             ArrayList list = new ArrayList(query.Count());
             if (query.Any())
             {
@@ -32,7 +32,7 @@ namespace IoT.EntityFrameworkCore.Repositories
             }
             foreach(var factory in list)
             {
-                _factoryRepository.AffiliateDelete((Factory)factory);
+                _factoryManager.Delete((Factory)factory);
             }
             Delete(entity);
         }

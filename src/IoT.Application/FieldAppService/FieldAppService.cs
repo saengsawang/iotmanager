@@ -13,17 +13,21 @@ using Microsoft.EntityFrameworkCore;
 using IoT.Application.FieldAppService.DTO;
 using AutoMapper;
 using Abp.Domain.Entities;
+using IoT.Core.Fields;
+using IoT.Core.Devices;
 
 namespace IoT.Application.FieldAppService
 {
     public class FieldAppService : ApplicationService, IFieldAppService
     {
-        private readonly IRepository<Field, int> _fieldRepository;
-        private readonly IRepository<Device, int> _deviceRepository;
-        public FieldAppService(IRepository<Field, int> fieldRepository,IRepository<Device, int> deviceRepository)
+        private readonly IFieldRepository _fieldRepository;
+        private readonly IDeviceRepository _deviceRepository;
+        private readonly IFieldManager _fieldManager;
+        public FieldAppService(IFieldRepository fieldRepository,IDeviceRepository deviceRepository, IFieldManager fieldManager)
         {
             _fieldRepository = fieldRepository;
             _deviceRepository = deviceRepository;
+            _fieldManager = fieldManager;
         }
 
         public FieldDto Get(EntityDto<int> input)
@@ -50,7 +54,15 @@ namespace IoT.Application.FieldAppService
         public FieldDto Create(FieldDto input)
         {
             var fieldQuery = _fieldRepository.GetAll().Where(f=>f.FieldName == input.FieldName);
-            if(fieldQuery.Any())
+            if ((fieldQuery.Any()) && (fieldQuery.FirstOrDefault().IsDeleted == true))
+            {
+                var entity_old = fieldQuery.FirstOrDefault();
+                entity_old.IsDeleted = false;
+                var result_old = _fieldRepository.Update(entity_old);
+                CurrentUnitOfWork.SaveChanges();
+                return ObjectMapper.Map<FieldDto>(result_old);
+            }
+            if (fieldQuery.Any())
             {
                 throw new ApplicationException("field 已存在");
             }
@@ -98,7 +110,16 @@ namespace IoT.Application.FieldAppService
         public void Delete(EntityDto<int> input)
         {
             var entity = _fieldRepository.Get(input.Id);
-            _fieldRepository.Delete(entity);
+            _fieldManager.Delete(entity);
+        }
+
+        public void BatchDelete(int[] inputs)
+        {
+            foreach (var input in inputs)
+            {
+                var entity = _fieldRepository.Get(input);
+                _fieldManager.Delete(entity);
+            }
         }
     }
 }

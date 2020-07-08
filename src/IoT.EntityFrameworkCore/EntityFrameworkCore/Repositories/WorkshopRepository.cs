@@ -3,22 +3,22 @@ using System.Collections;
 using System.Linq;
 using Abp.EntityFrameworkCore;
 using IoT.Core;
-using IoT.Core.Gateways.Entity;
-using IoT.Core.Workshops.Entity;
+using IoT.Core.Gateways;
+using IoT.Core.Workshops;
 
 namespace IoT.EntityFrameworkCore.Repositories
 {
     public class WorkshopRepository : IoTRepositoryBase<Workshop, int>, IWorkshopRepository
     {
-        private readonly IGatewayRepository _gatewayRepository;
-        public WorkshopRepository(IGatewayRepository gatewayRepository,IDbContextProvider<IoTDbContext> dbContextProvider) : base(dbContextProvider)
+        private readonly IGatewayManager _gatewayManager;
+        public WorkshopRepository(IGatewayManager gatewayManager,IDbContextProvider<IoTDbContext> dbContextProvider) : base(dbContextProvider)
         {
-            _gatewayRepository = gatewayRepository;
+            _gatewayManager = gatewayManager;
         }
 
         public void AffiliateDelete(Workshop entity)
         {
-            var query = _gatewayRepository.GetAll().Where(g=>g.WorkshopId == entity.Id);
+            var query = _gatewayManager.GetAll().Where(g=>g.WorkshopId == entity.Id);
             ArrayList list = new ArrayList(query.Count());
             if (query.Any())
             {
@@ -29,7 +29,7 @@ namespace IoT.EntityFrameworkCore.Repositories
             }
             foreach (var gateway in list)
             {
-                _gatewayRepository.AffiliateDelete((Gateway)gateway);
+                _gatewayManager.Delete((Gateway)gateway);
             }
             Delete(entity);
         }

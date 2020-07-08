@@ -1,7 +1,7 @@
 ﻿using System;
 using Abp.Domain.Repositories;
 
-namespace IoT.Core.Gateways.Entity
+namespace IoT.Core.Gateways
 {
     public interface IGatewayRepository : IRepository<Gateway, int>
     {

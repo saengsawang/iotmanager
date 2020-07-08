@@ -52,8 +52,17 @@ namespace IoT.Application.ThresholdAppService
 
         public ThresholdDto Create(ThresholdDto input)
         {
-            var thresholdQuery = _thresholdRepository.GetAll().Where(t=>t.RuleName == t.RuleName);
-            if(thresholdQuery.Any())
+            var thresholdQuery = _thresholdRepository.GetAll().Where(t=>t.RuleName == input.RuleName);
+
+            if ((thresholdQuery.Any()) && (thresholdQuery.FirstOrDefault().IsDeleted == true))
+            {
+                var entity = thresholdQuery.FirstOrDefault();
+                entity.IsDeleted = false;
+                var result_old = _thresholdRepository.Update(entity);
+                CurrentUnitOfWork.SaveChanges();
+                return ObjectMapper.Map<ThresholdDto>(result_old);
+            }
+            if (thresholdQuery.Any())
             {
                 throw new ApplicationException("threshold 已存在");
             }

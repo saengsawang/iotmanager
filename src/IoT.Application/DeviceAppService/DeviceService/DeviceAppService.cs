@@ -12,24 +12,31 @@ using IoT.Core;
 using L._52ABP.Application.Dtos;
 using Microsoft.EntityFrameworkCore;
 using Abp.Domain.Entities;
+using IoT.Core.Gateways;
+using IoT.Core.Workshops;
+using IoT.Core.Factories;
+using IoT.Core.Cities;
+using IoT.Core.Devices;
 
 namespace IoT.Application.DeviceAppService.DeviceService
 {
     public class DeviceAppService : ApplicationService, IDeviceAppService
     {
-        private readonly IRepository<Device, int> _deviceRepository;
-        private readonly IRepository<DeviceType, int> _deviceTypeRepository;
-        private readonly IRepository<Gateway, int> _gatewayRepository;
-        private readonly IRepository<Workshop, int> _workshopRepository;
-        private readonly IRepository<Factory, int> _factoryRepository;
-        private readonly IRepository<City, int> _cityRepository;
+        private readonly IDeviceRepository _deviceRepository;
+        private readonly IRepository<DeviceType> _deviceTypeRepository;
+        private readonly IGatewayRepository _gatewayRepository;
+        private readonly IWorkshopRepository _workshopRepository;
+        private readonly IFactoryRepository _factoryRepository;
+        private readonly ICityRepository _cityRepository;
+        private readonly IDeviceManager _deviceManager;
 
-        public DeviceAppService(IRepository<Device, int> deviceRepository,
-        IRepository<DeviceType, int> deviceTypeRepository,
-        IRepository<Gateway, int> gatewayRepository,
-        IRepository<Workshop, int> workshopRepository,
-        IRepository<Factory, int> factoryRepository,
-        IRepository<City, int> cityRepository)
+        public DeviceAppService(IDeviceRepository deviceRepository,
+        IRepository<DeviceType> deviceTypeRepository,
+        IGatewayRepository gatewayRepository,
+        IWorkshopRepository workshopRepository,
+        IFactoryRepository factoryRepository,
+        ICityRepository cityRepository,
+        IDeviceManager deviceManager)
         {
             _deviceRepository = deviceRepository;
             _deviceTypeRepository = deviceTypeRepository;
@@ -37,6 +44,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
             _workshopRepository = workshopRepository;
             _factoryRepository = factoryRepository;
             _cityRepository = cityRepository;
+            _deviceManager = deviceManager;
         }
 
         public DeviceDto Get(EntityDto<int> input)
@@ -75,6 +83,14 @@ namespace IoT.Application.DeviceAppService.DeviceService
         {
             var query = _deviceRepository.GetAllIncluding()
                .Where(d => d.HardwareId == input.HardwareId||d.DeviceName == input.DeviceName);
+            if ((query.Any()) && (query.FirstOrDefault().IsDeleted == true))
+            {
+                var entity = query.FirstOrDefault();
+                entity.IsDeleted = false;
+                var result_old = _deviceRepository.Update(entity);
+                CurrentUnitOfWork.SaveChanges();
+                return ObjectMapper.Map<DeviceDto>(result_old);
+            }
             if (query.Any())
             {
                 throw new ApplicationException("设备已存在");
@@ -183,7 +199,16 @@ namespace IoT.Application.DeviceAppService.DeviceService
             {
                 throw new ArgumentException("设备不存在或已删除");
             }
-            _deviceRepository.Delete(entity);
+            _deviceManager.Delete(entity);
+        }
+
+        public void BatchDelete(int[] inputs)
+        {
+            foreach (var input in inputs)
+            {
+                var entity = _deviceRepository.Get(input);
+                _deviceManager.Delete(entity);
+            }
         }
     }
 }

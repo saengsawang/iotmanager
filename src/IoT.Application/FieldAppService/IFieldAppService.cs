@@ -7,5 +7,6 @@ namespace IoT.Application.FieldAppService
 {
     public interface IFieldAppService : ICrudAppService<FieldDto, int, PagedSortedAndFilteredInputDto, FieldDto>
     {
+        void BatchDelete(int[] inputs);
     }
 }

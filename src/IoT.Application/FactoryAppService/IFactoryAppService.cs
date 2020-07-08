@@ -10,5 +10,7 @@ namespace IoT.Application.FactoryAppService
 {
     public interface IFactoryAppService:ICrudAppService<FactoryDto,int, PagedSortedAndFilteredInputDto, CreateFactoryDto>
     {
+        void BatchDelete(int[] inputs);
     }
 }
+

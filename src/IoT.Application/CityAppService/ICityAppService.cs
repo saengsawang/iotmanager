@@ -11,5 +11,6 @@ namespace IoT.Application.CityAppService
 {
     public interface ICityAppService:ICrudAppService<CityDto,int,CityPagedSortedAndFilteredDto,CreateCityDto,UpdateCityDto>
     {
+        void BatchDelete(int[] inputs);
     }
 }

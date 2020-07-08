@@ -9,5 +9,7 @@ namespace IoT.Application.WorkshopAppService
 {
     public interface IWorkshopAppService:ICrudAppService<WorkshopDto,int,PagedSortedAndFilteredInputDto,CreateWorkshopDto>
     {
+        void BatchDelete(int[] inputs);
     }
 }
+

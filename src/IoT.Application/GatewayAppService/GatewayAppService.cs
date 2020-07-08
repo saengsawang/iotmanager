@@ -12,7 +12,10 @@ using IoT.Core;
 using L._52ABP.Application.Dtos;
 using Microsoft.EntityFrameworkCore;
 using Abp.Domain.Entities;
-using IoT.Core.Gateways.Entity;
+using IoT.Core.Gateways;
+using IoT.Core.Workshops;
+using IoT.Core.Factories;
+using IoT.Core.Cities;
 
 namespace IoT.Application.GatewayAppService
 {
@@ -20,17 +23,24 @@ namespace IoT.Application.GatewayAppService
     {
         private readonly IRepository<GatewayType, int> _gatewayTypeRepository;
         private readonly IGatewayRepository _gatewayRepository;
-        private readonly IRepository<Workshop, int> _workshopRepository;
-        private readonly IRepository<Factory, int> _factoryRepository;
-        private readonly IRepository<City, int> _cityRepository;
+        private readonly IWorkshopRepository _workshopRepository;
+        private readonly IFactoryRepository _factoryRepository;
+        private readonly ICityRepository _cityRepository;
+        private readonly IGatewayManager _gatewayManager;
 
-        public GatewayAppService(IRepository<GatewayType, int> gatewayTypeRepository, IGatewayRepository gatewayRepository, IRepository<Workshop, int> workshopRepository, IRepository<Factory, int> factoryRepository, IRepository<City, int> cityRepository)
+        public GatewayAppService(IRepository<GatewayType, int> gatewayTypeRepository,
+            IGatewayRepository gatewayRepository,
+            IWorkshopRepository workshopRepository,
+            IFactoryRepository factoryRepository,
+            ICityRepository cityRepository,
+            IGatewayManager gatewayManager)
         {
             _gatewayTypeRepository = gatewayTypeRepository;
             _gatewayRepository = gatewayRepository;
             _workshopRepository = workshopRepository;
             _factoryRepository = factoryRepository;
             _cityRepository = cityRepository;
+            _gatewayManager = gatewayManager;
         }
 
 
@@ -67,7 +77,15 @@ namespace IoT.Application.GatewayAppService
         {
             var query = _gatewayRepository.GetAllIncluding().Where(g => g.HardwareId == input.HardwareId || g.GatewayName == input.GatewayName);
             var gateway_old = query.FirstOrDefault();
-            
+            if ((query.Any()) && (query.FirstOrDefault().IsDeleted == true))
+            {
+                
+                gateway_old.IsDeleted = false;
+                var result_old = _gatewayRepository.Update(gateway_old);
+                CurrentUnitOfWork.SaveChanges();
+                return ObjectMapper.Map<GatewayDto>(result_old);
+            }
+
             if (query.Any()&&gateway_old.IsDeleted==false)
             {
                 throw new ApplicationException("网关已存在");
@@ -145,7 +163,16 @@ namespace IoT.Application.GatewayAppService
             {
                 throw new ApplicationException("该设备不存在或已被删除");
             }
-            _gatewayRepository.AffiliateDelete(entity);
+            _gatewayManager.Delete(entity);
+        }
+
+        public void BatchDelete(int[] inputs)
+        {
+            foreach (var input in inputs)
+            {
+                var entity = _gatewayRepository.Get(input);
+                _gatewayManager.Delete(entity);
+            }
         }
     }
 }
