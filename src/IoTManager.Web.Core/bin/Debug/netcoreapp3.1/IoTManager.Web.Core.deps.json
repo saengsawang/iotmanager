@@ -721,7 +721,7 @@
         "runtime": {
           "lib/netcoreapp3.0/Hangfire.AspNetCore.dll": {
             "assemblyVersion": "1.7.8.0",
-            "fileVersion": "1.7.8.0"
+            "fileVersion": "0.0.0.0"
           }
         },
         "compile": {
@@ -750,7 +750,7 @@
         "runtime": {
           "lib/netstandard2.0/Hangfire.Core.dll": {
             "assemblyVersion": "1.7.8.0",
-            "fileVersion": "1.7.8.0"
+            "fileVersion": "0.0.0.0"
           }
         },
         "resources": {
@@ -797,7 +797,7 @@
         "runtime": {
           "lib/netstandard2.0/Hangfire.SqlServer.dll": {
             "assemblyVersion": "1.7.8.0",
-            "fileVersion": "1.7.8.0"
+            "fileVersion": "0.0.0.0"
           }
         },
         "compile": {
@@ -2226,7 +2226,7 @@
           "runtimes/win-arm64/native/sni.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "4.6.25512.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -2235,7 +2235,7 @@
           "runtimes/win-x64/native/sni.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "4.6.25512.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -2244,7 +2244,7 @@
           "runtimes/win-x86/native/sni.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "4.6.25512.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
