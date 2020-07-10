@@ -21,6 +21,7 @@ using System.Linq;
 using Abp.Linq.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Abp.Domain.Repositories;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IoT.Application.CityAppService
 {
@@ -48,13 +49,21 @@ namespace IoT.Application.CityAppService
 
         public PagedResultDto<CityDto> GetAll(CityPagedSortedAndFilteredDto input)
         {
-            var query = _cityRepository.GetAll().Where(c=>c.IsDeleted==false);
+            var query = _cityRepository.GetAll().Where(c=>c.IsDeleted==false).WhereIf(!input.FilterText.IsNullOrEmpty(),c=>input.FilterText.Contains(c.CityName));
+            
             var total = query.Count();
             var result = input.Sorting != null
                 ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()
                 : query.PageBy(input).ToList();
             return new PagedResultDto<CityDto>(total,ObjectMapper.Map<List<CityDto>>(result));
 
+        }
+
+        [HttpGet]
+        public long GetNumber()
+        {
+            var query = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
+            return query.Count();
         }
         /*
         public PagedResultDto<CityDto> GetAll(PagedResultRequestDto input)
@@ -134,6 +143,7 @@ namespace IoT.Application.CityAppService
             _cityManager.Delete(city);
         }
 
+        [HttpDelete]
         public void BatchDelete(int[] inputs)
         {
             foreach (var input in inputs)
@@ -143,5 +153,6 @@ namespace IoT.Application.CityAppService
             }
         }
 
+        
     }
 }

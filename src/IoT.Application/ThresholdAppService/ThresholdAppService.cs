@@ -13,15 +13,18 @@ using Microsoft.EntityFrameworkCore;
 using IoT.Application.FieldAppService.DTO;
 using IoT.Application.ThresholdAppService.DTO;
 using Abp.Domain.Entities;
+using IoT.Core.Fields;
+using IoT.Core.Thresholds;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IoT.Application.ThresholdAppService
 {
     public class ThresholdAppService : ApplicationService, IThresholdAppService
     {
-        private readonly IRepository<Threshold, int> _thresholdRepository;
-        private readonly IRepository<Field, int> _fieldRepository;
+        private readonly IThresholdRepository _thresholdRepository;
+        private readonly IFieldRepository _fieldRepository;
         private readonly IRepository<Severity, int> _severityRepository;
-        public ThresholdAppService(IRepository<Threshold, int> thresholdRepository, IRepository<Field, int> fieldRepository, IRepository<Severity, int> severityRepository)
+        public ThresholdAppService(IThresholdRepository thresholdRepository, IFieldRepository fieldRepository, IRepository<Severity, int> severityRepository)
         {
             _thresholdRepository = thresholdRepository;
             _fieldRepository = fieldRepository;
@@ -126,6 +129,7 @@ namespace IoT.Application.ThresholdAppService
             return ObjectMapper.Map<ThresholdDto>(result);
         }
 
+        [HttpDelete]
         public void Delete(EntityDto<int> input)
         {
             var entity = _thresholdRepository.Get(input.Id);

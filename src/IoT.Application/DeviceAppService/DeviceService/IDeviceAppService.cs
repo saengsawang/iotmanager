@@ -11,5 +11,10 @@ namespace IoT.Application.DeviceAppService.DeviceService
     public interface IDeviceAppService:ICrudAppService<DeviceDto,int, PagedSortedAndFilteredInputDto, CreateDeviceDto>
     {
         void BatchDelete(int[] inputs);
+        long GetNumber();
+        PagedResultDto<DeviceDto> GetByCity(string CityName);
+        PagedResultDto<DeviceDto> GetByFactory(string FactoryName);
+        PagedResultDto<DeviceDto> GetByWorkshop(string WorkshopName);
+        PagedResultDto<DeviceDto> GetByGateway(string GatewayName);
     }
 }

@@ -17,6 +17,7 @@ using IoT.Core.Workshops;
 using IoT.Core.Factories;
 using IoT.Core.Cities;
 using IoT.Core.Devices;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IoT.Application.DeviceAppService.DeviceService
 {
@@ -77,6 +78,90 @@ namespace IoT.Application.DeviceAppService.DeviceService
                 ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()
                 : query.PageBy(input).ToList();
             return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
+        }
+
+
+        [HttpGet]
+        public PagedResultDto<DeviceDto> GetByCity(string CityName)
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c => c.CityName == CityName).Where(g => g.IsDeleted == false);
+            if (!cityQuery.Any())
+            {
+                throw new ApplicationException("城市不存在或已被删除");
+            }
+            var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false).Where(d => d.Gateway.Workshop.Factory.City.CityName == CityName)
+                .Include(d => d.Gateway)
+               .Include(d => d.Gateway.Workshop)
+               .Include(d => d.Gateway.Workshop.Factory)
+               .Include(d => d.Gateway.Workshop.Factory.City)
+               .Include(d => d.DeviceType);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
+        }
+
+        [HttpGet]
+        public PagedResultDto<DeviceDto> GetByGateway(string GatewayName)
+        {
+            var gatewayQuery = _gatewayRepository.GetAll().Where(g => g.GatewayName == GatewayName).Where(g=>g.IsDeleted==false);
+            if (!gatewayQuery.Any())
+            {
+                throw new ApplicationException("gateway 不存在或已被删除");
+            }
+            var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false).Where(d => d.Gateway.GatewayName == GatewayName)
+                .Include(d => d.Gateway)
+               .Include(d => d.Gateway.Workshop)
+               .Include(d => d.Gateway.Workshop.Factory)
+               .Include(d => d.Gateway.Workshop.Factory.City)
+               .Include(d => d.DeviceType);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
+        }
+
+        [HttpGet]
+        public PagedResultDto<DeviceDto> GetByWorkshop(string WorkshopName)
+        {
+            var workshopQuery = _workshopRepository.GetAll().Where(w => w.WorkshopName == WorkshopName).Where(g => g.IsDeleted == false);
+            if (!workshopQuery.Any())
+            {
+                throw new ApplicationException("workshop 不存在或已被删除");
+            }
+            var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false).Where(d => d.Gateway.Workshop.WorkshopName == WorkshopName)
+                .Include(d => d.Gateway)
+               .Include(d => d.Gateway.Workshop)
+               .Include(d => d.Gateway.Workshop.Factory)
+               .Include(d => d.Gateway.Workshop.Factory.City)
+               .Include(d => d.DeviceType);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
+        }
+
+        [HttpGet]
+        public PagedResultDto<DeviceDto> GetByFactory(string FactoryName)
+        {
+            var gatewayQuery = _factoryRepository.GetAll().Where(f=>f.FactoryName == FactoryName).Where(g => g.IsDeleted == false);
+            if (!gatewayQuery.Any())
+            {
+                throw new ApplicationException("factory 不存在或已被删除");
+            }
+            var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false).Where(d => d.Gateway.Workshop.Factory.FactoryName == FactoryName)
+                .Include(d => d.Gateway)
+               .Include(d => d.Gateway.Workshop)
+               .Include(d => d.Gateway.Workshop.Factory)
+               .Include(d => d.Gateway.Workshop.Factory.City)
+               .Include(d => d.DeviceType);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
+        }
+
+        [HttpGet]
+        public long GetNumber()
+        {
+            var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false);
+            return query.Count();
         }
 
         public DeviceDto Create(CreateDeviceDto input)
@@ -202,6 +287,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
             _deviceManager.Delete(entity);
         }
 
+        [HttpDelete]
         public void BatchDelete(int[] inputs)
         {
             foreach (var input in inputs)
@@ -210,5 +296,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
                 _deviceManager.Delete(entity);
             }
         }
+
+        
     }
 }

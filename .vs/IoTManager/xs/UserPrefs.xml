@@ -1,13 +1,24 @@
 ﻿<Properties StartupConfiguration="{38E184BD-E874-4633-A947-AED4FDB73F40}|Default">
   <MonoDevelop.Ide.ItemProperties.src.IoTManager.Web.Host PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/IoT.Application/FactoryAppService/FactoryAppService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/IoT.Application/GatewayAppService/GatewayAppService.cs">
     <Files>
-      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/DeviceAppService.cs" Line="93" Column="14" />
-      <File FileName="src/IoT.Application/FieldAppService/FieldAppService.cs" Line="61" Column="50" />
-      <File FileName="src/IoT.Application/ThresholdAppService/ThresholdAppService.cs" Line="62" Column="53" />
-      <File FileName="src/IoT.Application/WorkshopAppService/WorkshopAppService.cs" Line="86" Column="52" />
-      <File FileName="src/IoT.Application/GatewayAppService/GatewayAppService.cs" Line="86" Column="51" />
-      <File FileName="src/IoT.Application/FactoryAppService/FactoryAppService.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/DeviceAppService.cs" Line="95" Column="26" />
+      <File FileName="src/IoT.Application/FieldAppService/FieldAppService.cs" />
+      <File FileName="src/IoT.Application/ThresholdAppService/ThresholdAppService.cs" />
+      <File FileName="src/IoT.Application/WorkshopAppService/WorkshopAppService.cs" />
+      <File FileName="src/IoT.Application/GatewayAppService/GatewayAppService.cs" Line="78" Column="9" />
+      <File FileName="src/IoT.Application/FactoryAppService/FactoryAppService.cs" />
+      <File FileName="src/IoTManager.Web.Host/Startup/Startup.cs" />
+      <File FileName="src/IoT.Application/CityAppService/CityAppService.cs" Line="66" Column="34" />
+      <File FileName="src/IoT.Application/CityAppService/ICityAppService.cs" />
+      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/IDeviceAppService.cs" Line="17" Column="70" />
+      <File FileName="src/IoT.Application/FactoryAppService/IFactoryAppService.cs" />
+      <File FileName="src/IoT.Application/FieldAppService/IFieldAppService.cs" />
+      <File FileName="src/IoT.Application/GatewayAppService/IGatewayAppService.cs" Line="17" Column="70" />
+      <File FileName="src/IoT.Application/ThresholdAppService/IThresholdAppService.cs" />
+      <File FileName="src/IoT.Application/WorkshopAppService/IWorkshopAppService.cs" />
+      <File FileName="src/IoTManager.Web.Host/appsettings.json" />
+      <File FileName="src/IoT.Application/GatewayAppService/GatewayTypeAppService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,53 +27,23 @@
             <Node name="src" expanded="True">
               <Node name="IoT" expanded="True">
                 <Node name="IoT.Application" expanded="True">
-                  <Node name="CityAppService" expanded="True">
-                    <Node name="DTO" expanded="True" />
-                  </Node>
                   <Node name="DeviceAppService" expanded="True">
-                    <Node name="DeviceService" expanded="True">
-                      <Node name="Dto" expanded="True" />
-                    </Node>
-                    <Node name="DeviceTypeService" expanded="True">
-                      <Node name="DTO" expanded="True" />
-                    </Node>
+                    <Node name="DeviceService" expanded="True" />
                   </Node>
-                  <Node name="FactoryAppService" expanded="True">
-                    <Node name="FactoryAppService.cs" selected="True" />
+                  <Node name="GatewayAppService" expanded="True">
+                    <Node name="GatewayAppService.cs" selected="True" />
                   </Node>
-                  <Node name="FieldAppService" expanded="True">
-                    <Node name="DTO" expanded="True" />
-                  </Node>
-                  <Node name="GatewayAppService" expanded="True" />
                   <Node name="ThresholdAppService" expanded="True" />
-                  <Node name="WorkshopAppService" expanded="True" />
                 </Node>
-                <Node name="IoT.Core" expanded="True">
-                  <Node name="Cities" expanded="True" />
-                  <Node name="Devices" expanded="True">
-                    <Node name="Entity" expanded="True" />
-                  </Node>
-                  <Node name="Factories" expanded="True" />
-                  <Node name="Gateways" expanded="True" />
-                  <Node name="Thresholds" expanded="True" />
-                </Node>
-                <Node name="IoT.EntityFrameworkCore" expanded="True">
-                  <Node name="EntityFrameworkCore" expanded="True">
-                    <Node name="Repositories" expanded="True" />
-                  </Node>
-                </Node>
+                <Node name="IoT.EntityFrameworkCore" expanded="True" />
                 <Node name="IoT.MongoDB" expanded="True">
                   <Node name="Dependencies" expanded="True" />
                 </Node>
               </Node>
-              <Node name="IoTManager" expanded="True">
-                <Node name="IoTManager.Application" expanded="True">
-                  <Node name="Users" expanded="True" />
-                </Node>
-                <Node name="IoTManager.Core" expanded="True" />
-                <Node name="IoTManager.EntityFrameworkCore" expanded="True" />
-              </Node>
               <Node name="IoTManager.Web.Host" expanded="True">
+                <Node name="App_Data" expanded="True">
+                  <Node name="Logs" expanded="True" />
+                </Node>
                 <Node name="Startup" expanded="True" />
               </Node>
             </Node>

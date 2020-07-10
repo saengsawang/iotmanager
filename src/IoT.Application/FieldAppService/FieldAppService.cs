@@ -15,6 +15,7 @@ using AutoMapper;
 using Abp.Domain.Entities;
 using IoT.Core.Fields;
 using IoT.Core.Devices;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IoT.Application.FieldAppService
 {
@@ -49,6 +50,29 @@ namespace IoT.Application.FieldAppService
                 ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()
                 : query.PageBy(input).ToList();
             return new PagedResultDto<FieldDto>(total, ObjectMapper.Map<List<FieldDto>>(result));
+        }
+
+
+        [HttpGet]
+        public PagedResultDto<FieldDto> GetByDevice(string DeviceName)
+        {
+            var deviceQuery = _deviceRepository.GetAll().Where(d => d.DeviceName == DeviceName).Where(g => g.IsDeleted == false);
+            if (!deviceQuery.Any())
+            {
+                throw new ApplicationException("城市不存在或已被删除");
+            }
+            var query = _fieldRepository.GetAll().Where(d => d.IsDeleted == false).Where(f => f.Device.DeviceName == DeviceName)
+               .Include(f => f.Device);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<FieldDto>(total, ObjectMapper.Map<List<FieldDto>>(result));
+        }
+
+        [HttpGet]
+        public long GetNumber()
+        {
+            var query = _fieldRepository.GetAll().Where(f => f.IsDeleted == false);
+            return query.Count();
         }
 
         public FieldDto Create(FieldDto input)
@@ -113,6 +137,7 @@ namespace IoT.Application.FieldAppService
             _fieldManager.Delete(entity);
         }
 
+        [HttpDelete]
         public void BatchDelete(int[] inputs)
         {
             foreach (var input in inputs)

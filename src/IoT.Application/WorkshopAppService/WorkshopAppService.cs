@@ -14,6 +14,7 @@ using IoT.Core.Cities;
 using IoT.Core.Factories;
 using IoT.Core.Workshops;
 using L._52ABP.Application.Dtos;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace IoT.Application.WorkshopAppService
@@ -58,6 +59,45 @@ namespace IoT.Application.WorkshopAppService
                 ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()
                 : query.PageBy(input).ToList();
             return new PagedResultDto<WorkshopDto>(total, ObjectMapper.Map<List<WorkshopDto>>(result));
+        }
+
+        [HttpGet]
+        public PagedResultDto<WorkshopDto> GetByCity(string CityName)
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c => c.CityName == CityName).Where(g => g.IsDeleted == false);
+            if (!cityQuery.Any())
+            {
+                throw new ApplicationException("城市不存在或已被删除");
+            }
+            var query = _workshopRepository.GetAll().Where(d => d.IsDeleted == false).Where(w => w.Factory.City.CityName == CityName)
+               .Include(w => w.Factory)
+               .Include(w => w.Factory.City);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<WorkshopDto>(total, ObjectMapper.Map<List<WorkshopDto>>(result));
+        }
+
+        [HttpGet]
+        public PagedResultDto<WorkshopDto> GetByFactory(string FactoryName)
+        {
+            var factoryQuery = _factoryRepository.GetAll().Where(f => f.FactoryName == FactoryName).Where(g => g.IsDeleted == false);
+            if (!factoryQuery.Any())
+            {
+                throw new ApplicationException("factory不存在或已被删除");
+            }
+            var query = _workshopRepository.GetAll().Where(d => d.IsDeleted == false).Where(w => w.Factory.FactoryName == FactoryName)
+               .Include(w => w.Factory)
+               .Include(w => w.Factory.City);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<WorkshopDto>(total, ObjectMapper.Map<List<WorkshopDto>>(result));
+        }
+
+        [HttpGet]
+        public long GetNumber()
+        {
+            var query = _workshopRepository.GetAll().Where(w => w.IsDeleted == false);
+            return query.Count();
         }
 
         public WorkshopDto Create(CreateWorkshopDto input)
@@ -129,6 +169,7 @@ namespace IoT.Application.WorkshopAppService
             _workshopManager.Delete(entity);
         }
 
+        [HttpDelete]
         public void BatchDelete(int[] inputs)
         {
             foreach (var input in inputs)

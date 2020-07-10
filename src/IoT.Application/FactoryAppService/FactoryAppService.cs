@@ -13,6 +13,7 @@ using IoT.Core;
 using IoT.Core.Cities;
 using IoT.Core.Factories;
 using L._52ABP.Application.Dtos;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace IoT.Application.FactoryAppService
@@ -51,6 +52,27 @@ namespace IoT.Application.FactoryAppService
             return new PagedResultDto<FactoryDto>(total, ObjectMapper.Map<List<FactoryDto>>(result));
         }
 
+        [HttpGet]
+        public PagedResultDto<FactoryDto> GetByCity(string CityName)
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c => c.CityName == CityName).Where(g => g.IsDeleted == false);
+            if (!cityQuery.Any())
+            {
+                throw new ApplicationException("城市不存在或已被删除");
+            }
+            var query = _factoryRepository.GetAll().Where(d => d.IsDeleted == false).Where(f => f.City.CityName == CityName)
+               .Include(f => f.City);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<FactoryDto>(total, ObjectMapper.Map<List<FactoryDto>>(result));
+        }
+
+        [HttpGet]
+        public long GetNumber()
+        {
+            var query = _factoryRepository.GetAll().Where(f => f.IsDeleted == false);
+            return query.Count();
+        }
 
         public FactoryDto Create(CreateFactoryDto input)
         {
@@ -103,6 +125,7 @@ namespace IoT.Application.FactoryAppService
             _factoryRepository.Delete(entity);
         }
 
+        [HttpDelete]
         public void BatchDelete(int[] inputs)
         {
             foreach (var input in inputs)
