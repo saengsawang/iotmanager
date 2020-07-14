@@ -18,6 +18,13 @@ namespace IoT.Application.CityAppService
         [HttpGet]
         long GetNumber();
 
-        
+        List<object> GetCityCascaderOptionsTilWorkshop();
+        List<object> GetCityCascaderOptionsTilGateway();
+        List<object> GetCityCascaderOptionsTilDevice();
+        object GetThreeLevelMenu();
+        List<Object> GetMapInfo();
+        List<object> GetCityMapInfo(String cityName);
+        object GetCityFactoryTree();
+        List<object> GetCityOptions();
     }
 }

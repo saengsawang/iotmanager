@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <Folder Include="Configuration\" />
+    <Folder Include="Regions\" />
+    <Folder Include="Regions\Entity\" />
   </ItemGroup>
 
   <ItemGroup>

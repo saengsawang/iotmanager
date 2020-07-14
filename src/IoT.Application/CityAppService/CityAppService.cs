@@ -22,6 +22,15 @@ using Abp.Linq.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Abp.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using IoT.Application.FactoryAppService.DTO;
+using IoT.Core.Gateways;
+using IoT.Core.Workshops;
+using IoT.Core.Factories;
+using IoT.Application.WorkshopAppService.DTO;
+using IoT.Application.GatewayAppService.DTO;
+using IoT.Core.Devices;
+using IoT.Application.DeviceAppService.DeviceService.Dto;
+using IoT.Core.Regions.Entity;
 
 namespace IoT.Application.CityAppService
 {
@@ -29,11 +38,26 @@ namespace IoT.Application.CityAppService
     {
         private readonly ICityManager _cityManager;
         private readonly ICityRepository _cityRepository;
+        private readonly IGatewayRepository _gatewayRepository;
+        private readonly IWorkshopRepository _workshopRepository;
+        private readonly IFactoryRepository _factoryRepository;
+        private readonly IDeviceRepository _deviceRepository;
+        private readonly IRepository<Region, int> _regionRepository;
 
-        public CityAppService(ICityManager cityManager, ICityRepository cityRepository)
+        public CityAppService(ICityManager cityManager, ICityRepository cityRepository,
+        IGatewayRepository gatewayRepository,
+        IWorkshopRepository workshopRepository,
+        IFactoryRepository factoryRepository,
+        IDeviceRepository deviceRepository,
+        IRepository<Region, int> regionRepository)
         {
             _cityManager = cityManager;
             _cityRepository = cityRepository;
+            _gatewayRepository = gatewayRepository;
+            _workshopRepository = workshopRepository;
+            _factoryRepository = factoryRepository;
+            _deviceRepository = deviceRepository;
+            _regionRepository = regionRepository;
         }
 
 
@@ -153,6 +177,233 @@ namespace IoT.Application.CityAppService
             }
         }
 
-        
+        public List<object> GetCityCascaderOptionsTilWorkshop()
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c=>c.IsDeleted==false);
+            List<City> cities1 = cityQuery.ToList();
+            List<CityDto> cities = ObjectMapper.Map<List<CityDto>>(cities1);
+            List<object> result = new List<object>();
+            result.Add(new { value = "全部", label = "全部" });
+            foreach (CityDto c in cities)
+            {
+                List<object> children = new List<object>();
+                var factoryQuery = _factoryRepository.GetAll().Where(f=>f.IsDeleted==false).Where(f=>f.City.CityName==c.CityName);
+                List<Factory> factories1 = factoryQuery.ToList(); 
+                List<FactoryDto> factories = ObjectMapper.Map<List<FactoryDto>>(factories1);
+                children.Add(new { value = "全部", label = "全部" });
+                foreach (FactoryDto f in factories)
+                {
+                    List<object> subchildren = new List<object>();
+                    var workshopQuery = _workshopRepository.GetAll().Where(w=>w.IsDeleted==false).Where(w=>w.Factory.FactoryName==f.FactoryName);
+                    List<Workshop> workshops1 = workshopQuery.ToList();
+                    List<WorkshopDto> workshops = ObjectMapper.Map<List<WorkshopDto>>(workshops1);
+                    subchildren.Add(new { value = "全部", label = "全部" });
+                    foreach (WorkshopDto w in workshops)
+                    {
+                        subchildren.Add(new { value = w.WorkshopName, label = w.WorkshopName });
+                    }
+                    children.Add(new { value = f.FactoryName, label = f.FactoryName, Workshop = subchildren });
+                }
+                result.Add(new { value = c.CityName, label = c.CityName, Factory = children });
+            }
+
+            return result;
+        }
+
+        public List<object> GetCityCascaderOptionsTilGateway()
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
+            List<City> cities1 = cityQuery.ToList();
+            List<CityDto> cities = ObjectMapper.Map<List<CityDto>>(cities1);
+            List<object> result = new List<object>();
+            result.Add(new { value = "全部", label = "全部" });
+            foreach (CityDto c in cities)
+            {
+                List<object> children = new List<object>();
+                var factoryQuery = _factoryRepository.GetAll().Where(f => f.IsDeleted == false).Where(f => f.City.CityName == c.CityName);
+                List<Factory> factories1 = factoryQuery.ToList();
+                List<FactoryDto> factories = ObjectMapper.Map<List<FactoryDto>>(factories1);
+                children.Add(new { value = "全部", label = "全部" });
+                foreach (FactoryDto f in factories)
+                {
+                    List<object> subchildren = new List<object>();
+                    var workshopQuery = _workshopRepository.GetAll().Where(w => w.IsDeleted == false).Where(w => w.Factory.FactoryName == f.FactoryName);
+                    List<Workshop> workshops1 = workshopQuery.ToList();
+                    List<WorkshopDto> workshops = ObjectMapper.Map<List<WorkshopDto>>(workshops1);
+                    subchildren.Add(new { value = "全部", label = "全部" });
+                    foreach (WorkshopDto w in workshops)
+                    {
+                        List<object> subchildren_2 = new List<object>();
+                        var gatewayQuery = _gatewayRepository.GetAll().Where(g => g.IsDeleted == false).Where(g=>g.Workshop.WorkshopName==w.WorkshopName);
+                        List<Gateway> gateways1 = gatewayQuery.ToList();
+                        List<GatewayDto> gateways = ObjectMapper.Map<List<GatewayDto>>(gateways1);
+                        subchildren_2.Add(new { value = "全部", label = "全部" });
+                        foreach (GatewayDto g in gateways)
+                        {
+                            subchildren_2.Add(new { varlue = g.GatewayName, label = g.GatewayName});
+                        }
+                        subchildren.Add(new { value = w.WorkshopName, label = w.WorkshopName, Gateway = subchildren_2 });
+                    }
+                    children.Add(new { value = f.FactoryName, label = f.FactoryName, Workshop = subchildren });
+                }
+                result.Add(new { value = c.CityName, label = c.CityName, Factory = children });
+            }
+
+            return result;
+        }
+
+        public List<object> GetCityCascaderOptionsTilDevice()
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
+            List<City> cities1 = cityQuery.ToList();
+            List<CityDto> cities = ObjectMapper.Map<List<CityDto>>(cities1);
+            List<object> result = new List<object>();
+            result.Add(new { value = "全部", label = "全部" });
+            foreach (CityDto c in cities)
+            {
+                List<object> children = new List<object>();
+                var factoryQuery = _factoryRepository.GetAll().Where(f => f.IsDeleted == false).Where(f => f.City.CityName == c.CityName);
+                List<Factory> factories1 = factoryQuery.ToList();
+                List<FactoryDto> factories = ObjectMapper.Map<List<FactoryDto>>(factories1);
+                children.Add(new { value = "全部", label = "全部" });
+                foreach (FactoryDto f in factories)
+                {
+                    List<object> subchildren = new List<object>();
+                    var workshopQuery = _workshopRepository.GetAll().Where(w => w.IsDeleted == false).Where(w => w.Factory.FactoryName == f.FactoryName);
+                    List<Workshop> workshops1 = workshopQuery.ToList();
+                    List<WorkshopDto> workshops = ObjectMapper.Map<List<WorkshopDto>>(workshops1);
+                    subchildren.Add(new { value = "全部", label = "全部" });
+                    foreach (WorkshopDto w in workshops)
+                    {
+                        List<object> subchildren_2 = new List<object>();
+                        var gatewayQuery = _gatewayRepository.GetAll().Where(g => g.IsDeleted == false).Where(g => g.Workshop.WorkshopName == w.WorkshopName);
+                        List<Gateway> gateways1 = gatewayQuery.ToList();
+                        List<GatewayDto> gateways = ObjectMapper.Map<List<GatewayDto>>(gateways1);
+                        subchildren_2.Add(new { value = "全部", label = "全部" });
+                        foreach (GatewayDto g in gateways)
+                        {
+                            List<object> subchildren_3 = new List<object>();
+                            var deviceQuery = _deviceRepository.GetAll().Where(d => d.IsDeleted == false).Where(d=>d.Gateway.GatewayName==g.GatewayName);
+                            List<Device> devices1 = deviceQuery.ToList();
+                            List<DeviceDto> devices = ObjectMapper.Map<List<DeviceDto>>(devices1);
+                            subchildren_3.Add(new { value = "全部", label = "全部" });
+                            foreach (DeviceDto d in devices)
+                            {
+                                subchildren_3.Add(new { value = d.DeviceName,label = d.DeviceName});
+                            }
+                            subchildren_2.Add(new { value = g.GatewayName, label = g.GatewayName, Device = subchildren_3 });
+                        }
+                        subchildren.Add(new { value = w.WorkshopName, label = w.WorkshopName, Gateway = subchildren_2 });
+                    }
+                    children.Add(new { value = f.FactoryName, label = f.FactoryName, Workshop = subchildren });
+                }
+                result.Add(new { value = c.CityName, label = c.CityName, Factory = children });
+            }
+
+            return result;
+        }
+
+        public object GetThreeLevelMenu()
+        {            
+           var query = _regionRepository.GetAll().Where(r=>r.IsDeleted==false);
+            Dictionary<String, String> result = new Dictionary<string, string>();
+           foreach (var q in query)
+            {
+                result.Add(q.Level, q.RegionName);
+            }
+
+            return result;
+            
+        }
+
+        public List<Object> GetMapInfo()
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
+            List<City> cities1 = cityQuery.ToList();
+            List<CityDto> cities = ObjectMapper.Map<List<CityDto>>(cities1);
+            var deviceQuery = _deviceRepository.GetAll().Where(d => d.IsDeleted == false);
+            List<Device> devices1 = deviceQuery.ToList();
+            List<DeviceDto> devices = ObjectMapper.Map<List<DeviceDto>>(devices1);
+            List<object> result = new List<object>();
+            foreach (CityDto city in cities)
+            {
+                int offlineNum = devices.AsQueryable()
+                    .Where(d => d.CityName == city.CityName && d.IsOnline==0)
+                    .ToList().Count;
+                int onlineNum = devices.AsQueryable()
+                    .Where(d => d.CityName == city.CityName && d.IsOnline ==1)
+                    .ToList().Count;
+                List<object> info = new List<object>();
+                info.Add(city.Longitude);
+                info.Add(city.Latitude);
+                info.Add("在线: " + onlineNum.ToString() + "; 离线: " + offlineNum.ToString());
+                result.Add(new { name = city.CityName, value = info });
+            }
+
+            return result;
+        }
+
+        public List<object> GetCityMapInfo(String cityName)
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false).Where(c=>c.CityName==cityName);
+            if (!cityQuery.Any())
+            {
+                throw new ApplicationException("城市不存在或已被删除");
+            }
+            var entity = cityQuery.FirstOrDefault();
+            var city = entity.MapTo<CityDto>();
+
+            var deviceQuery = _deviceRepository.GetAll().Where(d => d.IsDeleted == false);
+            List<Device> devices1 = deviceQuery.ToList();
+            List<DeviceDto> devices = ObjectMapper.Map<List<DeviceDto>>(devices1);
+            var offlineQuery = devices.AsQueryable()
+                .Where(d => d.CityName == cityName && d.IsOnline == 0)
+                .ToList().Count;
+            var onlineQuery = devices.AsQueryable()
+                .Where(d => d.CityName == cityName && d.IsOnline == 1)
+                .ToList().Count;
+            List<object> result = new List<object>();
+            List<object> info = new List<object>();
+            info.Add(city.Longitude);
+            info.Add(city.Latitude);
+            info.Add("在线: " + onlineQuery.ToString() + "; 离线: " + offlineQuery.ToString());
+            result.Add(new { name = cityName, value = info });
+            return result;
+        }
+
+        public object GetCityFactoryTree()
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
+            List<City> cities1 = cityQuery.ToList();
+            List<CityDto> cities = ObjectMapper.Map<List<CityDto>>(cities1);
+            List<object> result = new List<object>();
+            foreach (CityDto c in cities)
+            {
+                var factoryQuery = _factoryRepository.GetAll().Where(f => f.IsDeleted == false).Where(f => f.City.CityName == c.CityName);
+                List<Factory> factories1 = factoryQuery.ToList();
+                List<FactoryDto> factories = ObjectMapper.Map<List<FactoryDto>>(factories1);
+                List<object> children = new List<object>();
+                foreach (FactoryDto f in factories)
+                {
+                    children.Add(new { value = f.FactoryName, label = f.FactoryName, id = f.Id, factoryName = f.FactoryName, cityName = c.CityName });
+                }
+                result.Add(new { value = c.CityName, label = c.CityName, Factory = children });
+            }
+
+            return result;
+        }
+
+        public List<object> GetCityOptions()
+        {
+            var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
+            List<City> cities1 = cityQuery.ToList();
+            List<CityDto> cities = ObjectMapper.Map<List<CityDto>>(cities1);
+            List<object> result = new List<object>();
+            foreach (CityDto c in cities)
+            {
+                result.Add(new { ValueTuple = c.CityName, label = c.CityName });
+            }
+            return result;
+        }
     }
 }

@@ -24,6 +24,8 @@
     <Folder Include="ThresholdAppService\SevetityAppService\DTO\" />
     <Folder Include="FieldAppService\" />
     <Folder Include="ThresholdAppService\DTO\" />
+    <Folder Include="RegionAppService\" />
+    <Folder Include="RegionAppService\DTO\" />
   </ItemGroup>
 
 </Project>

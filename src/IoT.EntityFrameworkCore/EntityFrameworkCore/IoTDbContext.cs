@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Abp.EntityFrameworkCore;
 using IoT.Core;
+using IoT.Core.Regions.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace IoT.EntityFrameworkCore
@@ -26,6 +27,7 @@ namespace IoT.EntityFrameworkCore
         public virtual DbSet<Field> Field { get; set; }
         public virtual DbSet<Threshold> Threshold { get; set; }
         public virtual DbSet<Severity> Severity { get; set; }
+        public virtual DbSet<Region> Region { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

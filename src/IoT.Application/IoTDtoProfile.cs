@@ -11,10 +11,12 @@ using IoT.Application.DeviceAppService.OnlineTimeDailyService.Dto;
 using IoT.Application.FactoryAppService.DTO;
 using IoT.Application.FieldAppService.DTO;
 using IoT.Application.GatewayAppService.DTO;
+using IoT.Application.RegionAppService.DTO;
 using IoT.Application.ThresholdAppService.DTO;
 using IoT.Application.ThresholdAppService.SevetityAppService.DTO;
 using IoT.Application.WorkshopAppService.DTO;
 using IoT.Core;
+using IoT.Core.Regions.Entity;
 
 namespace IoT.Application
 {
@@ -96,6 +98,9 @@ namespace IoT.Application
             //Severity
             CreateMap<Severity, SeverityDto>();
             CreateMap<CreateSeverityDto, Severity>();
+            //Region
+            CreateMap<Region, RegionDto>();
+            CreateMap<CreateRegionDto, Region>();
         }
     }
 }

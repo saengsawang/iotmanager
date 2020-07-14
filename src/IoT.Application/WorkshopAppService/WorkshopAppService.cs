@@ -152,7 +152,7 @@ namespace IoT.Application.WorkshopAppService
             var factory = factoryQuery.FirstOrDefault();
             if (factory.IsNullOrDeleted())
             {
-                throw new ApplicationException("Workshop不存在或输入错误");
+                throw new ApplicationException("Factory不存在或输入错误");
             }
 
             var workshop = _workshopRepository.Get(input.Id);

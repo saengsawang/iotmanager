@@ -30,5 +30,6 @@ namespace IoT.Core.Cities
             return _cityRepositories.GetAll();
         }
 
+        
     }
 }

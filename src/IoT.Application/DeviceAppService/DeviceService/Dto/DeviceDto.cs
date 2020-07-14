@@ -13,6 +13,10 @@ namespace IoT.Application.DeviceAppService.DeviceService.Dto
         public string HardwareId { get; set; }
         public string GatewayName { get; set; }
         public string Remark { get; set; }
+        public byte IsOnline { get; set; }
+        public string ImageUrl { get; set; }
+        public string Base64Image { get; set; }
+        public string PictureRoute { get; set; }
         public DateTime CreationTime { get; set; }
         public DateTime? LastModificationTime { get; set; }
     }

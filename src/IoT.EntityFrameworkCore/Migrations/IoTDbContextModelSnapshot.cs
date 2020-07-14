@@ -453,6 +453,52 @@ namespace IoT.Migrations
                     b.ToTable("IoT_OnlineTimeDaily");
                 });
 
+            modelBuilder.Entity("IoT.Core.Regions.Entity.Region", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long?>("CreatorUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeleterUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("DeletionTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime?>("LastModificationTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<long?>("LastModifierUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Level")
+                        .IsRequired()
+                        .HasColumnType("varchar(30) CHARACTER SET utf8mb4")
+                        .HasMaxLength(30);
+
+                    b.Property<string>("RegionName")
+                        .IsRequired()
+                        .HasColumnType("varchar(30) CHARACTER SET utf8mb4")
+                        .HasMaxLength(30);
+
+                    b.Property<DateTime>("TimeStamp")
+                        .HasColumnType("datetime(6)")
+                        .HasMaxLength(30);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("IoT_Region");
+                });
+
             modelBuilder.Entity("IoT.Core.Severity", b =>
                 {
                     b.Property<int>("Id")

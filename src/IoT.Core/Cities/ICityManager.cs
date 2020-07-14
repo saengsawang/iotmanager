@@ -9,6 +9,6 @@ namespace IoT.Core.Cities
     public interface ICityManager:IDomainService
     {
         void Delete(City entity);
-        public IQueryable<City> GetAll();
+        IQueryable<City> GetAll();
     }
 }

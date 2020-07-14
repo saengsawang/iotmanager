@@ -16,5 +16,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
         PagedResultDto<DeviceDto> GetByFactory(string FactoryName);
         PagedResultDto<DeviceDto> GetByWorkshop(string WorkshopName);
         PagedResultDto<DeviceDto> GetByGateway(string GatewayName);
+        Object GetDeviceLocationByDeviceId(EntityDto<int> input);
+        List<object> GetFieldOptions();
     }
 }

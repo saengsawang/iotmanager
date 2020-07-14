@@ -18,6 +18,8 @@ using IoT.Core.Factories;
 using IoT.Core.Cities;
 using IoT.Core.Devices;
 using Microsoft.AspNetCore.Mvc;
+using IoT.Core.Fields;
+using IoT.Application.FieldAppService.DTO;
 
 namespace IoT.Application.DeviceAppService.DeviceService
 {
@@ -30,6 +32,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
         private readonly IFactoryRepository _factoryRepository;
         private readonly ICityRepository _cityRepository;
         private readonly IDeviceManager _deviceManager;
+        private readonly IFieldRepository _fieldRepository;
 
         public DeviceAppService(IDeviceRepository deviceRepository,
         IRepository<DeviceType> deviceTypeRepository,
@@ -37,7 +40,8 @@ namespace IoT.Application.DeviceAppService.DeviceService
         IWorkshopRepository workshopRepository,
         IFactoryRepository factoryRepository,
         ICityRepository cityRepository,
-        IDeviceManager deviceManager)
+        IDeviceManager deviceManager,
+        IFieldRepository fieldRepository)
         {
             _deviceRepository = deviceRepository;
             _deviceTypeRepository = deviceTypeRepository;
@@ -46,6 +50,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
             _factoryRepository = factoryRepository;
             _cityRepository = cityRepository;
             _deviceManager = deviceManager;
+            _fieldRepository = fieldRepository;
         }
 
         public DeviceDto Get(EntityDto<int> input)
@@ -297,6 +302,50 @@ namespace IoT.Application.DeviceAppService.DeviceService
             }
         }
 
-        
+        public Object GetDeviceLocationByDeviceId(EntityDto<int> input)
+        {
+            var device = _deviceRepository.Get(input.Id);
+            if (device.IsNullOrDeleted())
+            {
+                throw new ApplicationException("device不存在或已被删除");
+            }
+            var gateway = _gatewayRepository.Get(device.GatewayId);
+            var workshop = _workshopRepository.Get(gateway.WorkshopId);
+            var factory = _factoryRepository.Get(workshop.FactoryId);
+            var city = _cityRepository.Get(factory.CityId);
+            if (city.IsNullOrDeleted())
+            {
+                throw new ApplicationException("city不存在或已被删除");
+            }
+            return new
+            {
+                longitude = city.Longitude,
+                latitude = city.Latitude
+            };
+        }
+
+        public List<object> GetFieldOptions()
+       {
+            var deviceQuery = _deviceRepository.GetAll().Where(d => d.IsDeleted == false);
+            List<Device> devices1 = deviceQuery.ToList();
+            List<DeviceDto> devices = ObjectMapper.Map<List<DeviceDto>>(devices1);
+            List<object> result = new List<object>();
+            foreach (DeviceDto d in devices)
+            {
+                var fieldQuery = _fieldRepository.GetAll().Where(f => f.IsDeleted == false).Where(f=>f.DeviceId==d.Id);
+                List<Field> fields1 = fieldQuery.ToList();
+                List<FieldDto> fields = ObjectMapper.Map<List<FieldDto>>(fields1);
+                List<object> children = new List<object>();
+                foreach (var f in fields)
+                {
+                    children.Add(new { value = f.IndexId, label = f.FieldName });
+                }
+                result.Add(new { value = d.HardwareId, label = d.DeviceName, children = children });
+            }
+
+                return result;
+        }
+
+
     }
 }
