@@ -9,7 +9,7 @@ using Abp.Domain.Entities.Auditing;
 
 namespace IoT.Core.Regions.Entity
 {
-    [Table(IoTConsts.TablePrefix + "Region")]
+    //[Table(IoTConsts.TablePrefix + "Region")]
     public class Region : Entity<int>, IFullAudited
     {
         public Region()

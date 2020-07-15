@@ -5,14 +5,14 @@
       <File FileName="src/IoT.Application/CityAppService/CityAppService.cs" Line="74" Column="19" IsPinned="True" />
       <File FileName="src/IoTManager.EntityFrameworkCore/EntityFrameworkCore/IoTManagerDbContextConfigurer.cs" IsPinned="True" />
       <File FileName="src/IoT.Application/RegionAppService/DTO/CreateRegionDto.cs" IsPinned="True" />
-      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/Dto/DeviceDto.cs" IsPinned="True" />
-      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/DeviceAppService.cs" Line="412" Column="14" IsPinned="True" />
-      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/reference2.cs" IsPinned="True" />
+      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/Dto/DeviceDto.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/DeviceAppService.cs" Line="400" Column="62" IsPinned="True" />
+      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/reference2.cs" Line="1" Column="1" IsPinned="True" />
       <File FileName="src/IoT.Application/DeviceAppService/DeviceService/Dto/UpdateDeviceDto.cs" />
       <File FileName="src/IoT.Application/DeviceAppService/DeviceService/IDeviceAppService.cs" />
       <File FileName="src/IoT.Application/CityAppService/reference.cs" />
-      <File FileName="src/IoT.Core/Devices/Entity/Device.cs" />
-      <File FileName="src/IoT.Application/CityAppService/DTO/CityDto.cs" />
+      <File FileName="src/IoT.Core/Devices/Entity/Device.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Application/CityAppService/DTO/CityDto.cs" Line="1" Column="1" />
       <File FileName="src/IoT.Application/FactoryAppService/FactoryAppService.cs" />
       <File FileName="src/IoT.Application/GatewayAppService/GatewayAppService.cs" />
       <File FileName="src/IoT.Core/Devices/Entity/DeviceType.cs" />
@@ -38,6 +38,12 @@
       <File FileName="src/IoT.Core/Devices/Entity/OnlineTimeDaily.cs" />
       <File FileName="src/IoT.Core/Devices/IOnlineTimeDailyManager.cs" />
       <File FileName="src/IoT.Core/Devices/OnlineTimeDailyManager.cs" />
+      <File FileName="src/IoTManager.Web.Host/appsettings.json" Line="3" Column="46" />
+      <File FileName="src/IoT.EntityFrameworkCore/Migrations/20200715073700_Init2.Designer.cs" />
+      <File FileName="src/IoT.EntityFrameworkCore/Migrations/20200715074503_Init4.Designer.cs" />
+      <File FileName="src/IoT.EntityFrameworkCore/Migrations/20200715074503_Init4.cs" Line="19" Column="13" />
+      <File FileName="src/IoT.Application/CityAppService/DTO/CityPagedSortedAndFilteredDto.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Application/CityAppService/DTO/UpdateCityDto.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -82,6 +88,9 @@
                     <Node name="Entity" expanded="True" />
                   </Node>
                   <Node name="Fields" expanded="True">
+                    <Node name="Entity" expanded="True" />
+                  </Node>
+                  <Node name="Gateways" expanded="True">
                     <Node name="Entity" expanded="True" />
                   </Node>
                   <Node name="Regions" expanded="True">

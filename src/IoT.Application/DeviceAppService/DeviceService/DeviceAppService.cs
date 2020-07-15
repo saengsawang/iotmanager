@@ -74,6 +74,35 @@ namespace IoT.Application.DeviceAppService.DeviceService
             return ObjectMapper.Map<DeviceDto>(entity);
         }
 
+        //通过id模糊搜索
+        public PagedResultDto<DeviceDto> GetByFuzzyId(EntityDto<int> input)
+        {
+            var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false).Where(d=>d.Id.ToString().Contains(input.Id.ToString()))
+               .Include(d => d.Gateway)
+               .Include(d => d.Gateway.Workshop)
+               .Include(d => d.Gateway.Workshop.Factory)
+               .Include(d => d.Gateway.Workshop.Factory.City)
+               .Include(d => d.DeviceType);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
+        }
+
+        //通过名字模糊搜索
+        public PagedResultDto<DeviceDto> GetByFuzzyName(string deviceName)
+        {
+            var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false).Where(d => d.DeviceName.Contains(deviceName))
+               .Include(d => d.Gateway)
+               .Include(d => d.Gateway.Workshop)
+               .Include(d => d.Gateway.Workshop.Factory)
+               .Include(d => d.Gateway.Workshop.Factory.City)
+               .Include(d => d.DeviceType);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
+        }
+
+
         //得到所有的设备
         public PagedResultDto<DeviceDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
