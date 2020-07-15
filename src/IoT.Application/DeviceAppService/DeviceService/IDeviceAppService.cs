@@ -12,11 +12,15 @@ namespace IoT.Application.DeviceAppService.DeviceService
     {
         void BatchDelete(int[] inputs);
         long GetNumber();
+        PagedResultDto<DeviceDto> GetByType(string deviceType);
         PagedResultDto<DeviceDto> GetByCity(string CityName);
         PagedResultDto<DeviceDto> GetByFactory(string FactoryName);
         PagedResultDto<DeviceDto> GetByWorkshop(string WorkshopName);
         PagedResultDto<DeviceDto> GetByGateway(string GatewayName);
         Object GetDeviceLocationByDeviceId(EntityDto<int> input);
         List<object> GetFieldOptions();
+        DeviceDto UpdateLastConnectionTimeByDeviceId(int deviceId);
+        string GetPicture(int deviceId);
+        String UploadPicture(string base64Image, int deviceId);
     }
 }

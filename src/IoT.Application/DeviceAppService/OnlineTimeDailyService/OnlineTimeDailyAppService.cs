@@ -27,14 +27,14 @@ namespace IoT.Application.DeviceAppService
 
         public OnlineTimeDailyDto Get(EntityDto<int> input)
         {
-            var query = _onlineTimeDailyRepository.GetAllIncluding(o=>o.Device).Where(o=>o.Id==input.Id);
+            var query = _onlineTimeDailyRepository.GetAllIncluding(o=>o.Device).Where(o=>o.Id==input.Id).Where(otd => otd.IsDeleted == false);
             var entity = query.FirstOrDefault();
             return ObjectMapper.Map<OnlineTimeDailyDto>(entity);
         }
 
         public PagedResultDto<OnlineTimeDailyDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
-            var query = _onlineTimeDailyRepository.GetAll().Include(otd=>otd.Device);
+            var query = _onlineTimeDailyRepository.GetAll().Where(otd=>otd.IsDeleted==false).Include(otd=>otd.Device);
             var total = query.Count();
             var result = input.Sorting != null
                 ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()

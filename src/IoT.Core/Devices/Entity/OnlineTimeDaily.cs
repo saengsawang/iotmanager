@@ -10,7 +10,7 @@ using NPOI.SS.Formula.Functions;
 namespace IoT.Core
 {
     [Table(IoTConsts.TablePrefix+"OnlineTimeDaily")]
-    public class OnlineTimeDaily:Entity<int>,IAudited
+    public class OnlineTimeDaily:Entity<int>,IFullAudited
     {
         public int DeviceId { get; set; }
 
@@ -33,5 +33,8 @@ namespace IoT.Core
         public long? CreatorUserId { get; set; }
         public DateTime? LastModificationTime { get; set; }
         public long? LastModifierUserId { get; set; }
+        public long? DeleterUserId { get ; set ; }
+        public DateTime? DeletionTime { get ; set ; }
+        public bool IsDeleted { get; set; }
     }
 }

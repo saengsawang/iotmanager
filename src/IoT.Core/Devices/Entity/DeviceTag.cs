@@ -9,7 +9,7 @@ using Abp.Domain.Entities.Auditing;
 namespace IoT.Core
 {
     [Table(IoTConsts.TablePrefix + "DeviceTag")]
-    public class DeviceTag:Entity<int>,IAudited
+    public class DeviceTag:Entity<int>,IFullAudited
     {
         public int DeviceId { get; set; }
         [ForeignKey("DeviceId")]
@@ -28,5 +28,8 @@ namespace IoT.Core
         public DateTime? LastModificationTime { get; set; }
         public long? CreatorUserId { get; set; }
         public long? LastModifierUserId { get; set; }
+        public long? DeleterUserId { get ; set  ; }
+        public DateTime? DeletionTime { get ; set; }
+        public bool IsDeleted { get ; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace IoT.Application.DeviceAppService
 
         public DeviceTagDto Get(EntityDto<int> input)
         {
-            var query = _deviceTagRepository.GetAllIncluding(d => d.Device).Where(d => d.Id == input.Id);
+            var query = _deviceTagRepository.GetAllIncluding(d => d.Device).Where(d => d.Id == input.Id).Where(dtg => dtg.IsDeleted == false);
             var entity = query.FirstOrDefault();
             
             return ObjectMapper.Map<DeviceTagDto>(entity);
@@ -36,7 +36,7 @@ namespace IoT.Application.DeviceAppService
 
         public PagedResultDto<DeviceTagDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
-            var query = _deviceTagRepository.GetAll().Include(dtg=>dtg.Device);
+            var query = _deviceTagRepository.GetAll().Where(dtg=>dtg.IsDeleted==false).Include(dtg=>dtg.Device);
             var total = query.Count();
             var result = input.Sorting != null
                 ? query.OrderBy(input.Sorting).AsNoTracking().PageBy(input).ToList()

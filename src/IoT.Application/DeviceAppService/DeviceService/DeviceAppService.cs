@@ -20,6 +20,8 @@ using IoT.Core.Devices;
 using Microsoft.AspNetCore.Mvc;
 using IoT.Core.Fields;
 using IoT.Application.FieldAppService.DTO;
+using System.IO;
+using Microsoft.Extensions.Logging;
 
 namespace IoT.Application.DeviceAppService.DeviceService
 {
@@ -41,7 +43,8 @@ namespace IoT.Application.DeviceAppService.DeviceService
         IFactoryRepository factoryRepository,
         ICityRepository cityRepository,
         IDeviceManager deviceManager,
-        IFieldRepository fieldRepository)
+        IFieldRepository fieldRepository
+        )
         {
             _deviceRepository = deviceRepository;
             _deviceTypeRepository = deviceTypeRepository;
@@ -53,6 +56,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
             _fieldRepository = fieldRepository;
         }
 
+        //得到单个设备
         public DeviceDto Get(EntityDto<int> input)
         {
             var query = _deviceRepository.GetAll().Where(d => d.Id == input.Id)
@@ -70,9 +74,10 @@ namespace IoT.Application.DeviceAppService.DeviceService
             return ObjectMapper.Map<DeviceDto>(entity);
         }
 
+        //得到所有的设备
         public PagedResultDto<DeviceDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
-            var query = _deviceRepository.GetAll().Where(d=>d.IsDeleted==false)
+            var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false)
                .Include(d => d.Gateway)
                .Include(d => d.Gateway.Workshop)
                .Include(d => d.Gateway.Workshop.Factory)
@@ -85,7 +90,22 @@ namespace IoT.Application.DeviceAppService.DeviceService
             return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
         }
 
+        //通过设备类型过滤设备
+        [HttpGet]
+        public PagedResultDto<DeviceDto> GetByType(string deviceType)
+        {
+            var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false).Where(d => d.DeviceType.TypeName == deviceType)
+               .Include(d => d.Gateway)
+               .Include(d => d.Gateway.Workshop)
+               .Include(d => d.Gateway.Workshop.Factory)
+               .Include(d => d.Gateway.Workshop.Factory.City)
+               .Include(d => d.DeviceType);
+            var total = query.Count();
+            var result = query.ToList();
+            return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
+        }
 
+        //通过城市过滤设备
         [HttpGet]
         public PagedResultDto<DeviceDto> GetByCity(string CityName)
         {
@@ -105,10 +125,11 @@ namespace IoT.Application.DeviceAppService.DeviceService
             return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
         }
 
+        //通过网关过滤设备
         [HttpGet]
         public PagedResultDto<DeviceDto> GetByGateway(string GatewayName)
         {
-            var gatewayQuery = _gatewayRepository.GetAll().Where(g => g.GatewayName == GatewayName).Where(g=>g.IsDeleted==false);
+            var gatewayQuery = _gatewayRepository.GetAll().Where(g => g.GatewayName == GatewayName).Where(g => g.IsDeleted == false);
             if (!gatewayQuery.Any())
             {
                 throw new ApplicationException("gateway 不存在或已被删除");
@@ -124,6 +145,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
             return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
         }
 
+        //通过车间过滤设备
         [HttpGet]
         public PagedResultDto<DeviceDto> GetByWorkshop(string WorkshopName)
         {
@@ -143,10 +165,11 @@ namespace IoT.Application.DeviceAppService.DeviceService
             return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
         }
 
+        //通过工厂过滤设备
         [HttpGet]
         public PagedResultDto<DeviceDto> GetByFactory(string FactoryName)
         {
-            var gatewayQuery = _factoryRepository.GetAll().Where(f=>f.FactoryName == FactoryName).Where(g => g.IsDeleted == false);
+            var gatewayQuery = _factoryRepository.GetAll().Where(f => f.FactoryName == FactoryName).Where(g => g.IsDeleted == false);
             if (!gatewayQuery.Any())
             {
                 throw new ApplicationException("factory 不存在或已被删除");
@@ -161,18 +184,18 @@ namespace IoT.Application.DeviceAppService.DeviceService
             var result = query.ToList();
             return new PagedResultDto<DeviceDto>(total, ObjectMapper.Map<List<DeviceDto>>(result));
         }
-
+        //获得设备的数量
         [HttpGet]
         public long GetNumber()
         {
             var query = _deviceRepository.GetAll().Where(d => d.IsDeleted == false);
             return query.Count();
         }
-
+        //新建设备
         public DeviceDto Create(CreateDeviceDto input)
         {
             var query = _deviceRepository.GetAllIncluding()
-               .Where(d => d.HardwareId == input.HardwareId||d.DeviceName == input.DeviceName);
+               .Where(d => d.HardwareId == input.HardwareId || d.DeviceName == input.DeviceName);
             if ((query.Any()) && (query.FirstOrDefault().IsDeleted == true))
             {
                 var entity = query.FirstOrDefault();
@@ -200,7 +223,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
                 .Where(g => g.Workshop.Factory.City.CityName == input.CityName)
                 .Where(g => g.HardwareId == input.HardwareId || g.GatewayName == input.GatewayName);
             var gateway = gatewayQuery.FirstOrDefault();
-            if (gateway==null)
+            if (gateway == null)
             {
                 throw new ApplicationException("网关不存在");
             }
@@ -218,7 +241,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
             CurrentUnitOfWork.SaveChanges();
             return ObjectMapper.Map<DeviceDto>(result);
         }
-
+        //更新设备
         public DeviceDto Update(CreateDeviceDto input)
         {
             var entity = _deviceRepository.Get(input.Id);
@@ -281,7 +304,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
             CurrentUnitOfWork.SaveChanges();
             return ObjectMapper.Map<DeviceDto>(result);
         }
-
+        //单个删除
         public void Delete(EntityDto<int> input)
         {
             var entity = _deviceRepository.Get(input.Id);
@@ -291,7 +314,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
             }
             _deviceManager.Delete(entity);
         }
-
+        //批量删除
         [HttpDelete]
         public void BatchDelete(int[] inputs)
         {
@@ -301,7 +324,7 @@ namespace IoT.Application.DeviceAppService.DeviceService
                 _deviceManager.Delete(entity);
             }
         }
-
+        //获得设备位置
         public Object GetDeviceLocationByDeviceId(EntityDto<int> input)
         {
             var device = _deviceRepository.Get(input.Id);
@@ -319,20 +342,26 @@ namespace IoT.Application.DeviceAppService.DeviceService
             }
             return new
             {
+                cityName = city.CityName,
                 longitude = city.Longitude,
-                latitude = city.Latitude
+                latitude = city.Latitude,
+                factoryName = factory.FactoryName,
+                workshopName = workshop.WorkshopName,
+                gatewayName = gateway.GatewayName
+
             };
         }
 
+        //获得设备属性选项
         public List<object> GetFieldOptions()
-       {
+        {
             var deviceQuery = _deviceRepository.GetAll().Where(d => d.IsDeleted == false);
             List<Device> devices1 = deviceQuery.ToList();
             List<DeviceDto> devices = ObjectMapper.Map<List<DeviceDto>>(devices1);
             List<object> result = new List<object>();
             foreach (DeviceDto d in devices)
             {
-                var fieldQuery = _fieldRepository.GetAll().Where(f => f.IsDeleted == false).Where(f=>f.DeviceId==d.Id);
+                var fieldQuery = _fieldRepository.GetAll().Where(f => f.IsDeleted == false).Where(f => f.DeviceId == d.Id);
                 List<Field> fields1 = fieldQuery.ToList();
                 List<FieldDto> fields = ObjectMapper.Map<List<FieldDto>>(fields1);
                 List<object> children = new List<object>();
@@ -343,9 +372,51 @@ namespace IoT.Application.DeviceAppService.DeviceService
                 result.Add(new { value = d.HardwareId, label = d.DeviceName, children = children });
             }
 
-                return result;
+            return result;
         }
 
+        //上传base64图片数据
+        [HttpPost]
+        public String UploadPicture(string base64Image,int deviceId)
+        {
+            try
+            {
+                var device = _deviceRepository.Get(deviceId);
+                device.Base64Image = base64Image;
+                _deviceRepository.Update(device);
+                CurrentUnitOfWork.SaveChanges();
+                return "图片上传成功";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+        //获得base64图片数据
+        public string GetPicture(int deviceId)
+        {
+            try
+            {
+                var device = _deviceRepository.Get(deviceId);
+                return device.Base64Image;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        //更新连接时间
+        [HttpPost]
+        public DeviceDto UpdateLastConnectionTimeByDeviceId(int deviceId)
+        {
+            var device = _deviceRepository.Get(deviceId);
+            device.LastConnectionTime = DateTime.Now;
+            var result = _deviceRepository.Update(device);
+            CurrentUnitOfWork.SaveChanges();
+            return ObjectMapper.Map<DeviceDto>(result);
+        }
 
     }
 }

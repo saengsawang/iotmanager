@@ -30,6 +30,7 @@ namespace IoT.Application.FactoryAppService
             _factoryManager = factoryManager;
         }
 
+        //通过id获得工厂
         public FactoryDto Get(EntityDto<int> input)
         {
             var query = _factoryRepository.GetAllIncluding(e => e.City).Where(e => e.Id == input.Id);
@@ -42,6 +43,20 @@ namespace IoT.Application.FactoryAppService
             return result;
         }
 
+        //通过名字获得工厂
+        public FactoryDto GetByName(string factoryName)
+        {
+            var query = _factoryRepository.GetAllIncluding(f => f.City).Where(f => f.FactoryName == factoryName);
+            var entity = query.FirstOrDefault();
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该设备不存在或已被删除");
+            }
+            var result = ObjectMapper.Map<FactoryDto>(entity);
+            return result;
+        }
+
+        //获得所有工厂
         public PagedResultDto<FactoryDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
             var query = _factoryRepository.GetAllIncluding(q => q.City).Where(f=>f.IsDeleted==false);
@@ -52,6 +67,7 @@ namespace IoT.Application.FactoryAppService
             return new PagedResultDto<FactoryDto>(total, ObjectMapper.Map<List<FactoryDto>>(result));
         }
 
+        //获得特定城市的工厂
         [HttpGet]
         public PagedResultDto<FactoryDto> GetByCity(string CityName)
         {
@@ -67,6 +83,7 @@ namespace IoT.Application.FactoryAppService
             return new PagedResultDto<FactoryDto>(total, ObjectMapper.Map<List<FactoryDto>>(result));
         }
 
+        //获得工厂数量
         [HttpGet]
         public long GetNumber()
         {
@@ -74,6 +91,7 @@ namespace IoT.Application.FactoryAppService
             return query.Count();
         }
 
+        //新建工厂
         public FactoryDto Create(CreateFactoryDto input)
         {
             var factoryQuery = _factoryRepository.GetAll().Where(f => f.FactoryName == input.FactoryName);
@@ -103,6 +121,7 @@ namespace IoT.Application.FactoryAppService
             return ObjectMapper.Map<FactoryDto>(result);
         }
 
+        //更新工厂信息
         public FactoryDto Update(CreateFactoryDto input)
         {
             var query = _cityRepository.GetAll().Where(c => c.CityName == input.CityName);
@@ -119,12 +138,14 @@ namespace IoT.Application.FactoryAppService
             return ObjectMapper.Map<FactoryDto>(result);
         }
 
+        //删除工厂
         public void Delete(EntityDto<int> input)
         {
             var entity = _factoryRepository.Get(input.Id);
             _factoryRepository.Delete(entity);
         }
 
+        //批量删除工厂
         [HttpDelete]
         public void BatchDelete(int[] inputs)
         {

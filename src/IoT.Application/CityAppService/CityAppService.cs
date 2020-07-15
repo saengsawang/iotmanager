@@ -71,6 +71,18 @@ namespace IoT.Application.CityAppService
             return entity.MapTo<CityDto>();
         }
 
+        //通过名字获得城市
+        public CityDto GetByName(string cityName)
+        {
+            var query = _cityRepository.GetAll().Where(c=>c.CityName==cityName).Where(c=>c.IsDeleted==false);
+            var entity = query.FirstOrDefault();
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该设备不存在或已被删除");
+            }
+            return entity.MapTo<CityDto>();
+        }
+
         public PagedResultDto<CityDto> GetAll(CityPagedSortedAndFilteredDto input)
         {
             var query = _cityRepository.GetAll().Where(c=>c.IsDeleted==false).WhereIf(!input.FilterText.IsNullOrEmpty(),c=>input.FilterText.Contains(c.CityName));
@@ -83,6 +95,7 @@ namespace IoT.Application.CityAppService
 
         }
 
+        //获得城市数量
         [HttpGet]
         public long GetNumber()
         {
@@ -99,6 +112,8 @@ namespace IoT.Application.CityAppService
                 ObjectMapper.Map<List<CityDto>>(result)));
         }
         */
+
+        //新建城市
         public CityDto Create(CreateCityDto input)
         {
             string requestUrl= "https://restapi.amap.com/v3/geocode/geo?address=" + input.CityName +
@@ -141,6 +156,7 @@ namespace IoT.Application.CityAppService
             return result.MapTo<CityDto>();
         }
 
+        //更新城市信息
         public CityDto Update(UpdateCityDto input)
         {
             var city = _cityRepository.Get(input.Id);
@@ -155,6 +171,7 @@ namespace IoT.Application.CityAppService
             return result.MapTo<CityDto>();
         }
 
+        //删除单个城市同时删除附属工厂到设备属性
         public void Delete(EntityDto<int> input)
         {
             /*删除城市，城市的实验楼提示是否删除*/
@@ -167,6 +184,7 @@ namespace IoT.Application.CityAppService
             _cityManager.Delete(city);
         }
 
+        //批量删除城市
         [HttpDelete]
         public void BatchDelete(int[] inputs)
         {
@@ -177,6 +195,7 @@ namespace IoT.Application.CityAppService
             }
         }
 
+        //获得城市下拉选项直到车间
         public List<object> GetCityCascaderOptionsTilWorkshop()
         {
             var cityQuery = _cityRepository.GetAll().Where(c=>c.IsDeleted==false);
@@ -210,6 +229,7 @@ namespace IoT.Application.CityAppService
             return result;
         }
 
+        //获得城市下拉选项直到网关
         public List<object> GetCityCascaderOptionsTilGateway()
         {
             var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
@@ -252,6 +272,7 @@ namespace IoT.Application.CityAppService
             return result;
         }
 
+        //获得城市下拉选项直到设备
         public List<object> GetCityCascaderOptionsTilDevice()
         {
             var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
@@ -303,6 +324,7 @@ namespace IoT.Application.CityAppService
             return result;
         }
 
+        //获得三级菜单
         public object GetThreeLevelMenu()
         {            
            var query = _regionRepository.GetAll().Where(r=>r.IsDeleted==false);
@@ -316,6 +338,7 @@ namespace IoT.Application.CityAppService
             
         }
 
+        //获得地图设备分布信息
         public List<Object> GetMapInfo()
         {
             var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
@@ -343,7 +366,8 @@ namespace IoT.Application.CityAppService
             return result;
         }
 
-        public List<object> GetCityMapInfo(String cityName)
+        //获得特定城市设备分布
+        public List<object> GetCityMapInfo(string cityName)
         {
             var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false).Where(c=>c.CityName==cityName);
             if (!cityQuery.Any())
@@ -371,6 +395,7 @@ namespace IoT.Application.CityAppService
             return result;
         }
 
+        //获得城市工厂树状图
         public object GetCityFactoryTree()
         {
             var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
@@ -393,6 +418,7 @@ namespace IoT.Application.CityAppService
             return result;
         }
 
+        //获得城市选项
         public List<object> GetCityOptions()
         {
             var cityQuery = _cityRepository.GetAll().Where(c => c.IsDeleted == false);
