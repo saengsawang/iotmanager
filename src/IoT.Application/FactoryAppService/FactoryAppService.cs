@@ -46,11 +46,11 @@ namespace IoT.Application.FactoryAppService
         //通过名字获得工厂
         public FactoryDto GetByName(string factoryName)
         {
-            var query = _factoryRepository.GetAllIncluding(f => f.City).Where(f => f.FactoryName == factoryName);
+            var query = _factoryRepository.GetAllIncluding(f => f.City).Where(f => f.FactoryName.Contains(factoryName)).Where(f=>f.IsDeleted==false);
             var entity = query.FirstOrDefault();
             if (entity.IsNullOrDeleted())
             {
-                throw new ApplicationException("该设备不存在或已被删除");
+                throw new ApplicationException("该factory不存在或已被删除");
             }
             var result = ObjectMapper.Map<FactoryDto>(entity);
             return result;

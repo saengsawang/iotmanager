@@ -7,5 +7,6 @@ namespace IoT.Application.ThresholdAppService
 {
     public interface IThresholdAppService : ICrudAppService<ThresholdDto, int, PagedSortedAndFilteredInputDto, ThresholdDto>
     {
+        ThresholdDto GetByName(string ruleName);
     }
 }

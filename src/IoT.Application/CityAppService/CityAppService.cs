@@ -74,7 +74,7 @@ namespace IoT.Application.CityAppService
         //通过名字获得城市
         public CityDto GetByName(string cityName)
         {
-            var query = _cityRepository.GetAll().Where(c=>c.CityName==cityName).Where(c=>c.IsDeleted==false);
+            var query = _cityRepository.GetAll().Where(c=>c.CityName.Contains(cityName)).Where(c=>c.IsDeleted==false);
             var entity = query.FirstOrDefault();
             if (entity.IsNullOrDeleted())
             {

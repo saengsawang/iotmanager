@@ -14,6 +14,7 @@ namespace IoT.Application.WorkshopAppService
         long GetNumber();
         PagedResultDto<WorkshopDto> GetByCity(string CityName);
         PagedResultDto<WorkshopDto> GetByFactory(string FactoryName);
+        WorkshopDto GetByName(string workshopName);
     }
 }
 

@@ -28,6 +28,14 @@ namespace IoT.Application.DeviceAppService.DeviceTypeService
             return ObjectMapper.Map<DeviceTypeDto>(entity);
         }
 
+        public DeviceTypeDto GetByName(string typeName)
+        {
+            var query = _deviceTypeRepository.GetAll().Where(dt=>dt.TypeName.Contains(typeName));
+            var entity = query.FirstOrDefault();
+            
+            return ObjectMapper.Map<DeviceTypeDto>(entity);
+        }
+
         public PagedResultDto<DeviceTypeDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
             var query = _deviceTypeRepository.GetAll();

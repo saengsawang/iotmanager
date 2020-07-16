@@ -20238,3 +20238,417 @@ INFO  2020-07-15 16:23:06,861 [18   ] .Mvc.Infrastructure.ObjectResultExecutor -
 INFO  2020-07-15 16:23:06,866 [18   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetByFuzzyId (IoT.Application) in 62.6266ms
 INFO  2020-07-15 16:23:06,869 [18   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetByFuzzyId (IoT.Application)'
 INFO  2020-07-15 16:23:06,872 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 83.0288ms 200 application/json; charset=utf-8
+DEBUG 2020-07-16 10:54:36,935 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-07-16 10:54:37,054 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2020-07-16 10:54:37,071 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.Web.Host.Startup.IoTManagerWebHostModule, IoTManager.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,072 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerWebCoreModule, IoTManager.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerApplicationModule, IoTManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerCoreModule, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,074 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.EntityFrameworkCore.IoTManagerEntityFrameworkModule, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.EntityFrameworkCore.IoTEntityFrameworkModule, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Core.IoTCoreModule, IoT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Application.IoTApplicationModule, IoT.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,079 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2020-07-16 10:54:37,167 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 10:54:37,168 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 10:54:37,168 [1    ] o.Configuration.LanguageManagementConfig - Converted IoTManager (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 10:54:37,168 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 10:54:37,501 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoTManager.EntityFrameworkCore.IoTManagerDbContext, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:37,578 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoT.EntityFrameworkCore.IoTDbContext, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 10:54:38,668 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-07-16 10:54:38,876 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-07-16 10:54:39,174 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-07-16 10:54:39,300 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: IoTManager
+DEBUG 2020-07-16 10:54:39,498 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-07-16 10:54:39,803 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-07-16 10:54:40,002 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[IoTManager.MultiTenancy.Tenant, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[IoTManager.Authorization.Users.User, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-07-16 10:54:40,054 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2020-07-16 10:54:40,054 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-07-16 10:54:40,058 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.CreateUserDto
+DEBUG 2020-07-16 10:54:40,058 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.UserDto
+DEBUG 2020-07-16 10:54:40,059 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-07-16 10:54:40,059 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-07-16 10:54:40,059 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.CreateRoleDto
+DEBUG 2020-07-16 10:54:40,059 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.PermissionDto
+DEBUG 2020-07-16 10:54:40,059 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.RoleDto
+DEBUG 2020-07-16 10:54:40,059 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-07-16 10:54:40,060 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.TenantDto
+DEBUG 2020-07-16 10:54:40,060 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoT.Application.DeviceDataDto
+INFO  2020-07-16 10:54:42,295 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,ja,zh-Hans
+INFO  2020-07-16 10:54:42,660 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/Users/s9rt1v/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+INFO  2020-07-16 10:54:42,782 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-16 10:54:42,895 [18   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 10:54:46,395 [18   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-16 10:54:47,509 [18   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-16 10:54:47,516 [18   ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 1114.5383ms
+INFO  2020-07-16 10:54:47,519 [18   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 10:54:47,527 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4746.0303ms 302 
+INFO  2020-07-16 10:54:47,550 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-16 10:54:47,573 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 22.6046ms 301 
+INFO  2020-07-16 10:54:47,575 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-16 10:54:47,688 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 112.3996ms 200 text/html;charset=utf-8
+INFO  2020-07-16 10:54:49,957 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-16 10:54:49,963 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 10:54:49,972 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-16 10:54:49,994 [10   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-16 10:54:49,996 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 21.6762ms
+INFO  2020-07-16 10:54:50,002 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 10:54:50,005 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 51.4735ms 302 
+INFO  2020-07-16 10:54:50,025 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-16 10:54:50,031 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5.4808ms 301 
+INFO  2020-07-16 10:54:50,036 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-16 10:54:50,040 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.8018ms 200 text/html;charset=utf-8
+INFO  2020-07-16 10:54:50,046 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/ui/abp.swagger.js  
+INFO  2020-07-16 10:54:50,049 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/ui/abp.js  
+INFO  2020-07-16 10:54:50,060 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2020-07-16 10:54:50,062 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2020-07-16 10:54:50,067 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 22.4437ms 304 application/javascript
+INFO  2020-07-16 10:54:50,070 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 22.5195ms 304 application/javascript
+INFO  2020-07-16 10:54:50,489 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/v1/swagger.json  
+INFO  2020-07-16 10:54:50,732 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 243.6172ms 200 application/json;charset=utf-8
+INFO  2020-07-16 10:59:04,516 [27   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/Device/GetAll  
+INFO  2020-07-16 10:59:04,575 [27   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 10:59:04,596 [27   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Device"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.DeviceAppService.DeviceService.Dto.DeviceDto] GetAll(L._52ABP.Application.Dtos.PagedSortedAndFilteredInputDto) on controller IoT.Application.DeviceAppService.DeviceService.DeviceAppService (IoT.Application).
+INFO  2020-07-16 10:59:07,667 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 10:59:07,693 [27   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application) in 3093.9394ms
+INFO  2020-07-16 10:59:07,695 [27   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 10:59:07,698 [27   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3182.4126ms 200 application/json; charset=utf-8
+INFO  2020-07-16 10:59:46,851 [32   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 DELETE http://localhost:16504/api/services/app/Device/BatchDelete?inputs=5&inputs=8  0
+INFO  2020-07-16 10:59:46,858 [32   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-07-16 10:59:46,860 [32   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:16504 does not have permission to access the resource.
+INFO  2020-07-16 10:59:46,871 [32   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.BatchDelete (IoT.Application)'
+INFO  2020-07-16 10:59:46,881 [32   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "BatchDelete", controller = "Device"}. Executing controller action with signature Void BatchDelete(Int32[]) on controller IoT.Application.DeviceAppService.DeviceService.DeviceAppService (IoT.Application).
+INFO  2020-07-16 10:59:47,100 [32   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 10:59:47,104 [32   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.DeviceAppService.DeviceService.DeviceAppService.BatchDelete (IoT.Application) in 220.2823ms
+INFO  2020-07-16 10:59:47,107 [32   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.BatchDelete (IoT.Application)'
+INFO  2020-07-16 10:59:47,109 [32   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 258.6514ms 200 application/json; charset=utf-8
+INFO  2020-07-16 10:59:52,218 [27   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/Device/GetAll  
+INFO  2020-07-16 10:59:52,221 [27   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 10:59:52,226 [27   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Device"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.DeviceAppService.DeviceService.Dto.DeviceDto] GetAll(L._52ABP.Application.Dtos.PagedSortedAndFilteredInputDto) on controller IoT.Application.DeviceAppService.DeviceService.DeviceAppService (IoT.Application).
+INFO  2020-07-16 10:59:52,261 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 10:59:52,265 [27   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application) in 35.1299ms
+INFO  2020-07-16 10:59:52,268 [27   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 10:59:52,271 [27   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 52.9748ms 200 application/json; charset=utf-8
+INFO  2020-07-16 11:00:12,919 [27   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:16504/api/services/app/Device/Create application/json-patch+json 259
+INFO  2020-07-16 11:00:12,923 [27   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-07-16 11:00:12,926 [27   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:16504 does not have permission to access the resource.
+INFO  2020-07-16 11:00:12,930 [27   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.Create (IoT.Application)'
+INFO  2020-07-16 11:00:12,938 [27   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Device"}. Executing controller action with signature IoT.Application.DeviceAppService.DeviceService.Dto.DeviceDto Create(IoT.Application.DeviceAppService.DeviceService.Dto.CreateDeviceDto) on controller IoT.Application.DeviceAppService.DeviceService.DeviceAppService (IoT.Application).
+INFO  2020-07-16 11:00:13,033 [27   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 11:00:13,036 [27   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.DeviceAppService.DeviceService.DeviceAppService.Create (IoT.Application) in 95.7623ms
+INFO  2020-07-16 11:00:13,038 [27   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.Create (IoT.Application)'
+INFO  2020-07-16 11:00:13,040 [27   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 122.3594ms 200 application/json; charset=utf-8
+INFO  2020-07-16 11:00:19,325 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:16504/api/services/app/Device/Create application/json-patch+json 260
+INFO  2020-07-16 11:00:19,328 [33   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-07-16 11:00:19,330 [33   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:16504 does not have permission to access the resource.
+INFO  2020-07-16 11:00:19,333 [33   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.Create (IoT.Application)'
+INFO  2020-07-16 11:00:19,339 [33   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "Device"}. Executing controller action with signature IoT.Application.DeviceAppService.DeviceService.Dto.DeviceDto Create(IoT.Application.DeviceAppService.DeviceService.Dto.CreateDeviceDto) on controller IoT.Application.DeviceAppService.DeviceService.DeviceAppService (IoT.Application).
+INFO  2020-07-16 11:00:19,393 [33   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 11:00:19,397 [33   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.DeviceAppService.DeviceService.DeviceAppService.Create (IoT.Application) in 55.1913ms
+INFO  2020-07-16 11:00:19,400 [33   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.Create (IoT.Application)'
+INFO  2020-07-16 11:00:19,403 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 78.29ms 200 application/json; charset=utf-8
+INFO  2020-07-16 11:00:24,692 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/Device/GetAll  
+INFO  2020-07-16 11:00:24,695 [33   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 11:00:24,700 [33   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Device"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.DeviceAppService.DeviceService.Dto.DeviceDto] GetAll(L._52ABP.Application.Dtos.PagedSortedAndFilteredInputDto) on controller IoT.Application.DeviceAppService.DeviceService.DeviceAppService (IoT.Application).
+INFO  2020-07-16 11:00:24,752 [35   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 11:00:24,780 [35   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application) in 54.4326ms
+INFO  2020-07-16 11:00:24,783 [35   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 11:00:24,790 [35   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 97.4541ms 200 application/json; charset=utf-8
+DEBUG 2020-07-16 16:06:39,736 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-07-16 16:06:39,852 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2020-07-16 16:06:39,870 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.Web.Host.Startup.IoTManagerWebHostModule, IoTManager.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,872 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerWebCoreModule, IoTManager.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerApplicationModule, IoTManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerCoreModule, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.EntityFrameworkCore.IoTManagerEntityFrameworkModule, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.EntityFrameworkCore.IoTEntityFrameworkModule, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Core.IoTCoreModule, IoT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Application.IoTApplicationModule, IoT.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:39,879 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2020-07-16 16:06:39,972 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 16:06:39,972 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 16:06:39,972 [1    ] o.Configuration.LanguageManagementConfig - Converted IoTManager (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 16:06:39,972 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 16:06:40,306 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoTManager.EntityFrameworkCore.IoTManagerDbContext, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:40,382 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoT.EntityFrameworkCore.IoTDbContext, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:06:41,702 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-07-16 16:06:41,919 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-07-16 16:06:42,228 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-07-16 16:06:42,353 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: IoTManager
+DEBUG 2020-07-16 16:06:42,556 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-07-16 16:06:42,858 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-07-16 16:06:43,066 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[IoTManager.MultiTenancy.Tenant, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[IoTManager.Authorization.Users.User, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-07-16 16:06:43,120 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2020-07-16 16:06:43,120 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-07-16 16:06:43,125 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.CreateUserDto
+DEBUG 2020-07-16 16:06:43,126 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.UserDto
+DEBUG 2020-07-16 16:06:43,126 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-07-16 16:06:43,126 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-07-16 16:06:43,126 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.CreateRoleDto
+DEBUG 2020-07-16 16:06:43,126 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.PermissionDto
+DEBUG 2020-07-16 16:06:43,127 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.RoleDto
+DEBUG 2020-07-16 16:06:43,127 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-07-16 16:06:43,127 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.TenantDto
+DEBUG 2020-07-16 16:06:43,127 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoT.Application.DeviceDataDto
+INFO  2020-07-16 16:06:45,587 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,ja,zh-Hans
+INFO  2020-07-16 16:06:45,980 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/Users/s9rt1v/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+INFO  2020-07-16 16:06:46,132 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-16 16:06:46,253 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 16:06:51,286 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-16 16:06:52,730 [4    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-16 16:06:52,739 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 1444.5913ms
+INFO  2020-07-16 16:06:52,742 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 16:06:52,751 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 6621.9512ms 302 
+INFO  2020-07-16 16:06:52,777 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-16 16:06:52,798 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 20.8364ms 301 
+INFO  2020-07-16 16:06:52,801 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-16 16:06:52,912 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 111.343ms 200 text/html;charset=utf-8
+INFO  2020-07-16 16:06:54,262 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-16 16:06:54,267 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 16:06:54,274 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-16 16:06:54,290 [14   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-16 16:06:54,293 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 15.285ms
+INFO  2020-07-16 16:06:54,295 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 16:06:54,298 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 36.0064ms 302 
+INFO  2020-07-16 16:06:54,314 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-16 16:06:54,318 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.5155ms 301 
+INFO  2020-07-16 16:06:54,326 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-16 16:06:54,330 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.8002ms 200 text/html;charset=utf-8
+INFO  2020-07-16 16:06:55,232 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/v1/swagger.json  
+INFO  2020-07-16 16:06:55,480 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 248.6974ms 200 application/json;charset=utf-8
+INFO  2020-07-16 16:08:49,575 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?SkipCount=2  
+INFO  2020-07-16 16:08:49,637 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:08:49,661 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:08:53,068 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:08:53,081 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 3417.7615ms
+INFO  2020-07-16 16:08:53,084 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:08:53,087 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3511.6054ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:09:03,831 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?SkipCount=1  
+INFO  2020-07-16 16:09:03,843 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:03,849 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:09:03,904 [22   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:09:03,917 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 64.2729ms
+INFO  2020-07-16 16:09:03,920 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:03,924 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 92.5051ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:09:09,778 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?MaxResultCount=1  
+INFO  2020-07-16 16:09:09,782 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:09,787 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:09:09,809 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:09:09,814 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 23.1336ms
+INFO  2020-07-16 16:09:09,817 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:09,820 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 41.7486ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:09:14,883 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?MaxResultCount=2  
+INFO  2020-07-16 16:09:14,886 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:14,893 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:09:14,925 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:09:14,930 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 33.4848ms
+INFO  2020-07-16 16:09:14,934 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:14,937 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 53.8784ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:09:33,941 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?Sorting=%22did%22  
+INFO  2020-07-16 16:09:33,945 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:33,951 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:09:34,282 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:09:34,286 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 332.4872ms
+INFO  2020-07-16 16:09:34,288 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:34,291 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 350.8428ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:09:41,037 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?Sorting=%22dsd%22  
+INFO  2020-07-16 16:09:41,041 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:41,053 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:09:41,086 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:09:41,092 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 35.6721ms
+INFO  2020-07-16 16:09:41,096 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:41,102 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 63.9024ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:09:47,671 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?Sorting=asd  
+INFO  2020-07-16 16:09:47,675 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:09:47,682 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+ERROR 2020-07-16 16:10:36,709 [31   ] Mvc.ExceptionHandling.AbpExceptionFilter - No property or field 'asd' exists in type 'City'
+No property or field 'asd' exists in type 'City' (at index 0)
+INFO  2020-07-16 16:10:36,762 [31   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:10:36,768 [31   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 49082.2546ms
+INFO  2020-07-16 16:10:36,770 [31   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:10:36,774 [31   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 49101.9784ms 500 application/json; charset=utf-8
+INFO  2020-07-16 16:11:06,344 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?Sorting=DESC  
+INFO  2020-07-16 16:11:06,348 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:11:06,355 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+ERROR 2020-07-16 16:11:15,337 [33   ] Mvc.ExceptionHandling.AbpExceptionFilter - No property or field 'DESC' exists in type 'City'
+No property or field 'DESC' exists in type 'City' (at index 0)
+INFO  2020-07-16 16:11:15,341 [33   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:11:15,345 [33   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 8987.3866ms
+INFO  2020-07-16 16:11:15,348 [33   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:11:15,351 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 9007.1591ms 500 application/json; charset=utf-8
+INFO  2020-07-16 16:11:31,014 [33   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?Sorting=%22ASC%22  
+INFO  2020-07-16 16:11:31,018 [33   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:11:31,024 [33   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:11:31,077 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:11:31,082 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 54.0047ms
+INFO  2020-07-16 16:11:31,086 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:11:31,090 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 74.4602ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:11:37,496 [37   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?Sorting=%22DESC%22  
+INFO  2020-07-16 16:11:37,499 [37   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:11:37,505 [37   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:11:37,555 [20   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:11:37,559 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 50.5345ms
+INFO  2020-07-16 16:11:37,563 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:11:37,566 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 69.1737ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:13:02,286 [36   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?Sorting=%22id%20DESC%22  
+INFO  2020-07-16 16:13:02,290 [36   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:13:02,295 [36   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:13:02,345 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:13:02,349 [37   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 50.6031ms
+INFO  2020-07-16 16:13:02,352 [37   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:13:02,356 [37   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 69.5547ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:13:11,945 [39   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?Sorting=id%20DESC  
+INFO  2020-07-16 16:13:11,948 [39   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:13:11,954 [39   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:13:11,978 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:13:11,982 [37   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 24.907ms
+INFO  2020-07-16 16:13:11,985 [37   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:13:11,988 [37   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 42.5028ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:15:04,927 [37   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:16504/api/services/app/City/Create application/json-patch+json 49
+INFO  2020-07-16 16:15:04,936 [37   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-07-16 16:15:04,939 [37   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:16504 does not have permission to access the resource.
+INFO  2020-07-16 16:15:04,943 [37   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.Create (IoT.Application)'
+INFO  2020-07-16 16:15:04,950 [37   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Create", controller = "City"}. Executing controller action with signature IoT.Application.CityAppService.DTO.CityDto Create(IoT.Application.CityAppService.DTO.CreateCityDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:15:05,992 [37   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:15:05,995 [37   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.Create (IoT.Application) in 1042.7682ms
+INFO  2020-07-16 16:15:05,998 [37   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.Create (IoT.Application)'
+INFO  2020-07-16 16:15:06,001 [37   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1073.1562ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:15:13,874 [43   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll?SkipCount=2  
+INFO  2020-07-16 16:15:13,877 [43   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:15:13,882 [43   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:15:13,931 [41   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:15:13,936 [41   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 49.5763ms
+INFO  2020-07-16 16:15:13,938 [41   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:15:13,942 [41   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 67.6193ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:17:53,752 [48   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-16 16:17:53,757 [48   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5.1031ms 200 text/html;charset=utf-8
+INFO  2020-07-16 16:17:54,051 [48   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/swagger-ui.css  
+INFO  2020-07-16 16:17:54,115 [47   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/swagger-ui-bundle.js  
+INFO  2020-07-16 16:17:54,143 [51   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/swagger-ui-standalone-preset.js  
+INFO  2020-07-16 16:17:54,167 [52   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/ui/abp.js  
+INFO  2020-07-16 16:17:54,220 [46   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/ui/abp.swagger.js  
+INFO  2020-07-16 16:17:54,478 [57   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: '/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Web.Host/wwwroot/swagger/ui/abp.js'
+INFO  2020-07-16 16:17:54,478 [55   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: '/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoTManager.Web.Host/wwwroot/swagger/ui/abp.swagger.js'
+INFO  2020-07-16 16:17:54,515 [49   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2020-07-16 16:17:54,518 [57   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 368.4816ms 200 application/javascript
+INFO  2020-07-16 16:17:54,520 [55   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 321.7388ms 200 application/javascript
+INFO  2020-07-16 16:17:54,523 [47   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2020-07-16 16:17:54,527 [47   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 385.6127ms 200 application/javascript
+INFO  2020-07-16 16:17:54,529 [49   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 476.3741ms 200 text/css
+INFO  2020-07-16 16:17:54,536 [49   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2020-07-16 16:17:54,539 [49   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 423.6453ms 200 application/javascript
+INFO  2020-07-16 16:17:54,817 [59   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/v1/swagger.json  
+INFO  2020-07-16 16:17:54,858 [55   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 42.4409ms 200 application/json;charset=utf-8
+INFO  2020-07-16 16:29:17,173 [78   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetAll  
+INFO  2020-07-16 16:29:17,177 [78   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:29:17,183 [78   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "City"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.CityAppService.DTO.CityDto] GetAll(IoT.Application.CityAppService.DTO.CityPagedSortedAndFilteredDto) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:29:17,249 [74   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:29:17,252 [74   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 66.2692ms
+INFO  2020-07-16 16:29:17,254 [74   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
+INFO  2020-07-16 16:29:17,257 [74   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 85.353ms 200 application/json; charset=utf-8
+DEBUG 2020-07-16 16:51:29,452 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-07-16 16:51:29,566 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2020-07-16 16:51:29,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.Web.Host.Startup.IoTManagerWebHostModule, IoTManager.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerWebCoreModule, IoTManager.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerApplicationModule, IoTManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerCoreModule, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.EntityFrameworkCore.IoTManagerEntityFrameworkModule, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,593 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,593 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.EntityFrameworkCore.IoTEntityFrameworkModule, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,593 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Core.IoTCoreModule, IoT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,593 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Application.IoTApplicationModule, IoT.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,594 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,594 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,594 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:29,597 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2020-07-16 16:51:29,685 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 16:51:29,685 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 16:51:29,685 [1    ] o.Configuration.LanguageManagementConfig - Converted IoTManager (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 16:51:29,685 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-16 16:51:30,028 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoTManager.EntityFrameworkCore.IoTManagerDbContext, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:30,123 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoT.EntityFrameworkCore.IoTDbContext, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-16 16:51:31,268 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-07-16 16:51:31,478 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-07-16 16:51:31,770 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-07-16 16:51:31,888 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: IoTManager
+DEBUG 2020-07-16 16:51:32,078 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-07-16 16:51:32,392 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-07-16 16:51:32,584 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[IoTManager.MultiTenancy.Tenant, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[IoTManager.Authorization.Users.User, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-07-16 16:51:32,636 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2020-07-16 16:51:32,636 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-07-16 16:51:32,641 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.CreateUserDto
+DEBUG 2020-07-16 16:51:32,641 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.UserDto
+DEBUG 2020-07-16 16:51:32,641 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-07-16 16:51:32,642 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-07-16 16:51:32,642 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.CreateRoleDto
+DEBUG 2020-07-16 16:51:32,642 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.PermissionDto
+DEBUG 2020-07-16 16:51:32,642 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.RoleDto
+DEBUG 2020-07-16 16:51:32,642 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-07-16 16:51:32,642 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.TenantDto
+DEBUG 2020-07-16 16:51:32,642 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoT.Application.DeviceDataDto
+INFO  2020-07-16 16:51:34,854 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,ja,zh-Hans
+INFO  2020-07-16 16:51:35,227 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/Users/s9rt1v/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+INFO  2020-07-16 16:51:35,360 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-16 16:51:35,470 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 16:51:39,617 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-16 16:51:40,927 [8    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-16 16:51:40,934 [8    ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 1310.852ms
+INFO  2020-07-16 16:51:40,937 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 16:51:40,946 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5586.74ms 302 
+INFO  2020-07-16 16:51:40,969 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-16 16:51:40,993 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 23.8897ms 301 
+INFO  2020-07-16 16:51:40,996 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-16 16:51:41,109 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 113.0123ms 200 text/html;charset=utf-8
+INFO  2020-07-16 16:51:42,385 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-16 16:51:42,390 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 16:51:42,398 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-16 16:51:42,419 [4    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-16 16:51:42,423 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 21.8186ms
+INFO  2020-07-16 16:51:42,426 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-16 16:51:42,429 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 44.1955ms 302 
+INFO  2020-07-16 16:51:42,437 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-16 16:51:42,441 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.12ms 301 
+INFO  2020-07-16 16:51:42,445 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-16 16:51:42,449 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.0368ms 200 text/html;charset=utf-8
+INFO  2020-07-16 16:51:42,903 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/v1/swagger.json  
+INFO  2020-07-16 16:51:43,134 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 231.1638ms 200 application/json;charset=utf-8
+INFO  2020-07-16 16:51:53,575 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/GetByName?cityName=%E5%8C%97  
+INFO  2020-07-16 16:51:53,607 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.GetByName (IoT.Application)'
+INFO  2020-07-16 16:51:53,624 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetByName", controller = "City"}. Executing controller action with signature IoT.Application.CityAppService.DTO.CityDto GetByName(System.String) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-16 16:51:56,934 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:51:56,959 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetByName (IoT.Application) in 3331.2282ms
+INFO  2020-07-16 16:51:56,963 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetByName (IoT.Application)'
+INFO  2020-07-16 16:51:56,967 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3390.1914ms 200 application/json; charset=utf-8
+INFO  2020-07-16 16:52:08,798 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/Factory/GetByName?factoryName=1  
+INFO  2020-07-16 16:52:08,808 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.FactoryAppService.FactoryAppService.GetByName (IoT.Application)'
+INFO  2020-07-16 16:52:08,816 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetByName", controller = "Factory"}. Executing controller action with signature IoT.Application.FactoryAppService.DTO.FactoryDto GetByName(System.String) on controller IoT.Application.FactoryAppService.FactoryAppService (IoT.Application).
+INFO  2020-07-16 16:52:09,033 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-16 16:52:09,038 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.FactoryAppService.FactoryAppService.GetByName (IoT.Application) in 219.6366ms
+INFO  2020-07-16 16:52:09,041 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.FactoryAppService.FactoryAppService.GetByName (IoT.Application)'
+INFO  2020-07-16 16:52:09,044 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 246.1944ms 200 application/json; charset=utf-8

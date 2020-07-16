@@ -34,6 +34,8 @@ namespace IoT.Application.DeviceAppService
             return ObjectMapper.Map<DeviceTagDto>(entity);
         }
 
+        
+
         public PagedResultDto<DeviceTagDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
             var query = _deviceTagRepository.GetAll().Where(dtg=>dtg.IsDeleted==false).Include(dtg=>dtg.Device);

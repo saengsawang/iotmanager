@@ -13,6 +13,7 @@ namespace IoT.Application.FactoryAppService
         void BatchDelete(int[] inputs);
         long GetNumber();
         PagedResultDto<FactoryDto> GetByCity(string CityName);
+        FactoryDto GetByName(string factoryName);
     }
 }
 

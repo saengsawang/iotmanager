@@ -37,7 +37,18 @@ namespace IoT.Application.FieldAppService
             var entity = query.FirstOrDefault();
             if (entity.IsNullOrDeleted())
             {
-                throw new ApplicationException("该设备不存在或已被删除");
+                throw new ApplicationException("该field不存在或已被删除");
+            }
+            return ObjectMapper.Map<FieldDto>(entity);
+        }
+
+        public FieldDto GetByName(string fieldName)
+        {
+            var query = _fieldRepository.GetAllIncluding(f => f.Device).Where(f => f.FieldName.Contains(fieldName));
+            var entity = query.FirstOrDefault();
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该field不存在或已被删除");
             }
             return ObjectMapper.Map<FieldDto>(entity);
         }

@@ -50,6 +50,18 @@ namespace IoT.Application.WorkshopAppService
             return ObjectMapper.Map<WorkshopDto>(entity);
         }
 
+        public WorkshopDto GetByName(string workshopName)
+        {
+            var query = _workshopRepository.GetAllIncluding(w => w.Factory).Where(w =>w.WorkshopName .Contains(workshopName)).Where(f => f.IsDeleted == false).Include(w=>w.Factory.City);
+            var entity = query.FirstOrDefault();
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该workshop不存在或已被删除");
+            }
+            var result = ObjectMapper.Map<WorkshopDto>(entity);
+            return result;
+        }
+
         public PagedResultDto<WorkshopDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
             var query = _workshopRepository.GetAllIncluding(w=>w.Factory).Where(w=>w.IsDeleted==false)

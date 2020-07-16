@@ -11,5 +11,6 @@ namespace IoT.Application.FieldAppService
         void BatchDelete(int[] inputs);
         long GetNumber();
         PagedResultDto<FieldDto> GetByDevice(string DeviceName);
+        FieldDto GetByName(string fieldName);
     }
 }

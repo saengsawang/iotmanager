@@ -37,7 +37,18 @@ namespace IoT.Application.ThresholdAppService
             var entity = query.FirstOrDefault(); ;
             if (entity.IsNullOrDeleted())
             {
-                throw new ApplicationException("该设备不存在或已被删除");
+                throw new ApplicationException("该threshold不存在或已被删除");
+            }
+            return ObjectMapper.Map<ThresholdDto>(entity);
+        }
+
+        public ThresholdDto GetByName(string ruleName)
+        {
+            var query = _thresholdRepository.GetAllIncluding(t => t.Field).Include(t => t.Severity).Where(t => t.RuleName.Contains(ruleName));
+            var entity = query.FirstOrDefault(); ;
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该threshold不存在或已被删除");
             }
             return ObjectMapper.Map<ThresholdDto>(entity);
         }

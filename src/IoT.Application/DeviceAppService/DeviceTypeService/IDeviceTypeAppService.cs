@@ -7,6 +7,6 @@ namespace IoT.Application.DeviceAppService.DeviceTypeService
 {
     public interface IDeviceTypeAppService : ICrudAppService<DeviceTypeDto, int, PagedSortedAndFilteredInputDto, CreateDeviceTypeDto>
     {
-    
+        DeviceTypeDto GetByName(string typeName);
     }
 }

@@ -60,6 +60,21 @@ namespace IoT.Application.GatewayAppService
             return ObjectMapper.Map<GatewayDto>(entity);
         }
 
+        public GatewayDto GetByName(string gatewayName)
+        {
+            var query = _gatewayRepository.GetAll().Where(g => g.GatewayName.Contains(gatewayName)).Where(g=>g.IsDeleted==false)
+                .Include(g => g.Workshop)
+                .Include(g => g.Workshop.Factory)
+                .Include(g => g.Workshop.Factory.City)
+                .Include(g => g.GatewayType);
+            var entity = query.FirstOrDefault();
+            if (entity.IsNullOrDeleted())
+            {
+                throw new ApplicationException("该设备不存在或已被删除");
+            }
+            return ObjectMapper.Map<GatewayDto>(entity);
+        }
+
         public PagedResultDto<GatewayDto> GetAll(PagedSortedAndFilteredInputDto input)
         {
             var query=_gatewayRepository.GetAll().Where(g=>g.IsDeleted==false)
