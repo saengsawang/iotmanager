@@ -3028,7 +3028,10 @@
         },
         "runtime": {
           "bin/placeholder/IoT.Core.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "IoTManager.Core/1.0.0": {
         "type": "project",
@@ -9283,35 +9286,33 @@
     ]
   },
   "packageFolders": {
-    "/Users/s9rt1v/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\lenovo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.EntityFrameworkCore/IoT.EntityFrameworkCore.csproj",
+      "projectUniqueName": "D:\\Work\\IOT\\Abp_IoTManager-localTest\\src\\IoT.EntityFrameworkCore\\IoT.EntityFrameworkCore.csproj",
       "projectName": "IoT.EntityFrameworkCore",
-      "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.EntityFrameworkCore/IoT.EntityFrameworkCore.csproj",
-      "packagesPath": "/Users/s9rt1v/.nuget/packages/",
-      "outputPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.EntityFrameworkCore/obj/",
+      "projectPath": "D:\\Work\\IOT\\Abp_IoTManager-localTest\\src\\IoT.EntityFrameworkCore\\IoT.EntityFrameworkCore.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "D:\\Work\\IOT\\Abp_IoTManager-localTest\\src\\IoT.EntityFrameworkCore\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/s9rt1v/.config/NuGet/NuGet.Config"
+        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.Core/IoT.Core.csproj": {
-              "projectPath": "/Users/s9rt1v/Desktop/gitstuff/Abp_IoTManager-localTest/src/IoT.Core/IoT.Core.csproj"
+            "D:\\Work\\IOT\\Abp_IoTManager-localTest\\src\\IoT.Core\\IoT.Core.csproj": {
+              "projectPath": "D:\\Work\\IOT\\Abp_IoTManager-localTest\\src\\IoT.Core\\IoT.Core.csproj"
             }
           }
         }
@@ -9353,11 +9354,14 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

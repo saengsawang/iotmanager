@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{38E184BD-E874-4633-A947-AED4FDB73F40}|Default">
   <MonoDevelop.Ide.ItemProperties.src.IoTManager.Web.Host PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/IoT.Application/CityAppService/CityAppService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/IoTManager.Application/Sessions/Dto/UserLoginInfoDto.cs">
     <Files>
-      <File FileName="src/IoT.Application/CityAppService/CityAppService.cs" Line="84" Column="10" IsPinned="True" />
+      <File FileName="src/IoT.Application/CityAppService/CityAppService.cs" Line="62" Column="1" IsPinned="True" />
       <File FileName="src/IoTManager.EntityFrameworkCore/EntityFrameworkCore/IoTManagerDbContextConfigurer.cs" IsPinned="True" />
       <File FileName="src/IoT.Application/RegionAppService/DTO/CreateRegionDto.cs" IsPinned="True" />
       <File FileName="src/IoT.Application/DeviceAppService/DeviceService/Dto/DeviceDto.cs" IsPinned="True" />
-      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/DeviceAppService.cs" IsPinned="True" />
+      <File FileName="src/IoT.Application/DeviceAppService/DeviceService/DeviceAppService.cs" Line="77" Column="19" IsPinned="True" />
       <File FileName="src/IoT.Application/DeviceAppService/DeviceService/reference2.cs" IsPinned="True" />
       <File FileName="src/IoT.Application/DeviceAppService/DeviceService/Dto/UpdateDeviceDto.cs" />
       <File FileName="src/IoT.Application/DeviceAppService/DeviceService/IDeviceAppService.cs" />
       <File FileName="src/IoT.Application/CityAppService/reference.cs" />
       <File FileName="src/IoT.Core/Devices/Entity/Device.cs" />
-      <File FileName="src/IoT.Application/CityAppService/DTO/CityDto.cs" />
+      <File FileName="src/IoT.Application/CityAppService/DTO/CityDto.cs" Line="18" Column="60" />
       <File FileName="src/IoT.Application/FactoryAppService/FactoryAppService.cs" />
       <File FileName="src/IoT.Application/GatewayAppService/GatewayAppService.cs" />
       <File FileName="src/IoT.Core/Devices/Entity/DeviceType.cs" />
@@ -42,8 +42,8 @@
       <File FileName="src/IoT.EntityFrameworkCore/Migrations/20200715073700_Init2.Designer.cs" />
       <File FileName="src/IoT.EntityFrameworkCore/Migrations/20200715074503_Init4.Designer.cs" />
       <File FileName="src/IoT.EntityFrameworkCore/Migrations/20200715074503_Init4.cs" />
-      <File FileName="src/IoT.Application/CityAppService/DTO/CityPagedSortedAndFilteredDto.cs" />
-      <File FileName="src/IoT.Application/CityAppService/DTO/UpdateCityDto.cs" />
+      <File FileName="src/IoT.Application/CityAppService/DTO/CityPagedSortedAndFilteredDto.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Application/CityAppService/DTO/UpdateCityDto.cs" Line="1" Column="1" />
       <File FileName="src/IoT.Application/WorkshopAppService/WorkshopAppService.cs" />
       <File FileName="src/IoT.Application/FieldAppService/FieldAppService.cs" />
       <File FileName="src/IoT.Application/ThresholdAppService/ThresholdAppService.cs" />
@@ -54,6 +54,19 @@
       <File FileName="src/IoT.Application/GatewayAppService/IGatewayAppService.cs" />
       <File FileName="src/IoT.Application/ThresholdAppService/IThresholdAppService.cs" />
       <File FileName="src/IoT.Application/WorkshopAppService/IWorkshopAppService.cs" />
+      <File FileName="src/IoT.Core/Cities/Entity/City.cs" Line="34" Column="60" />
+      <File FileName="src/IoT.Application/CityAppService/DTO/CityGeoDto.cs" Line="1" Column="1" />
+      <File FileName="src/IoT.Application/CityAppService/DTO/CreateCityDto.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Web.Core/Authentication/External/ExternalAuthConfiguration.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Web.Core/Authentication/External/ExternalAuthManager.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Web.Core/Authentication/External/ExternalAuthUserInfo.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Web.Core/Authentication/JwtBearer/JwtTokenMiddleware.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Web.Core/Authentication/JwtBearer/TokenAuthConfiguration.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Web.Core/Authentication/External/IExternalAuthConfiguration.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Web.Core/Authentication/External/ExternalLoginProviderInfo.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Web.Core/Authentication/External/ExternalAuthProviderApiBase.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Application/Sessions/SessionAppService.cs" Line="1" Column="1" />
+      <File FileName="src/IoTManager.Application/Sessions/Dto/UserLoginInfoDto.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -61,28 +74,25 @@
           <Node name="IoTManager" expanded="True">
             <Node name="src" expanded="True">
               <Node name="IoT" expanded="True">
-                <Node name="IoT.Application" expanded="True">
-                  <Node name="CityAppService" expanded="True">
-                    <Node name="CityAppService.cs" selected="True" />
-                  </Node>
-                  <Node name="DeviceAppService" expanded="True">
-                    <Node name="DeviceService" expanded="True" />
-                    <Node name="DeviceTagService" expanded="True" />
-                    <Node name="DeviceTypeService" expanded="True" />
-                  </Node>
-                  <Node name="DeviceDataAppService" expanded="True" />
-                  <Node name="FactoryAppService" expanded="True" />
-                  <Node name="FieldAppService" expanded="True" />
-                  <Node name="GatewayAppService" expanded="True" />
-                  <Node name="ThresholdAppService" expanded="True" />
-                  <Node name="WorkshopAppService" expanded="True" />
-                </Node>
+                <Node name="IoT.Application" expanded="True" />
+                <Node name="IoT.Core" expanded="True" />
                 <Node name="IoT.MongoDB" expanded="True">
                   <Node name="Dependencies" expanded="True" />
                 </Node>
               </Node>
-              <Node name="IoTManager" expanded="True" />
+              <Node name="IoTManager" expanded="True">
+                <Node name="IoTManager.Application" expanded="True">
+                  <Node name="Sessions" expanded="True">
+                    <Node name="Dto" expanded="True">
+                      <Node name="UserLoginInfoDto.cs" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
               <Node name="IoTManager.Web.Core" expanded="True">
+                <Node name="Authentication" expanded="True">
+                  <Node name="JwtBearer" expanded="True" />
+                </Node>
                 <Node name="Configuration" expanded="True" />
                 <Node name="Models" expanded="True" />
               </Node>

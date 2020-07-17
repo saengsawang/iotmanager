@@ -4,8 +4,8 @@
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
-    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/s9rt1v/.nuget/packages/</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/s9rt1v/.nuget/packages/;/usr/local/share/dotnet/sdk/NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\lenovo\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.6.0</NuGetToolVersion>
   </PropertyGroup>
@@ -13,7 +13,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Content Include="$(NuGetPackageRoot)l.52abp.common/4.1.286.98/contentFiles/any/netcoreapp3.1/launchSettings.json" Condition="Exists('$(NuGetPackageRoot)l.52abp.common/4.1.286.98/contentFiles/any/netcoreapp3.1/launchSettings.json')">
+    <Content Include="$(NuGetPackageRoot)l.52abp.common\4.1.286.98\contentFiles\any\netcoreapp3.1\launchSettings.json" Condition="Exists('$(NuGetPackageRoot)l.52abp.common\4.1.286.98\contentFiles\any\netcoreapp3.1\launchSettings.json')">
       <NuGetPackageId>L.52ABP.Common</NuGetPackageId>
       <NuGetPackageVersion>4.1.286.98</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
@@ -22,7 +22,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Content Include="$(NuGetPackageRoot)l.52abp.core/4.1.286.98/contentFiles/any/netcoreapp3.1/launchSettings.json" Condition="Exists('$(NuGetPackageRoot)l.52abp.core/4.1.286.98/contentFiles/any/netcoreapp3.1/launchSettings.json')">
+    <Content Include="$(NuGetPackageRoot)l.52abp.core\4.1.286.98\contentFiles\any\netcoreapp3.1\launchSettings.json" Condition="Exists('$(NuGetPackageRoot)l.52abp.core\4.1.286.98\contentFiles\any\netcoreapp3.1\launchSettings.json')">
       <NuGetPackageId>L.52ABP.Core</NuGetPackageId>
       <NuGetPackageVersion>4.1.286.98</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
@@ -31,6 +31,6 @@
     </Content>
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/Users/s9rt1v/.nuget/packages/microsoft.codeanalysis.analyzers/2.9.3</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\lenovo\.nuget\packages\microsoft.codeanalysis.analyzers\2.9.3</PkgMicrosoft_CodeAnalysis_Analyzers>
   </PropertyGroup>
 </Project>

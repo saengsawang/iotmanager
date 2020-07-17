@@ -20731,3 +20731,269 @@ INFO  2020-07-16 17:05:04,940 [13   ] .Mvc.Infrastructure.ObjectResultExecutor -
 INFO  2020-07-16 17:05:04,958 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application) in 3464.1775ms
 INFO  2020-07-16 17:05:04,961 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.GetAll (IoT.Application)'
 INFO  2020-07-16 17:05:04,964 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3546.7512ms 200 application/json; charset=utf-8
+DEBUG 2020-07-17 14:49:20,964 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-07-17 14:49:21,073 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2020-07-17 14:49:21,093 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.Web.Host.Startup.IoTManagerWebHostModule, IoTManager.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerWebCoreModule, IoTManager.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerApplicationModule, IoTManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerCoreModule, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,097 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,097 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.EntityFrameworkCore.IoTManagerEntityFrameworkModule, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,098 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,098 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,098 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.EntityFrameworkCore.IoTEntityFrameworkModule, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Core.IoTCoreModule, IoT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Application.IoTApplicationModule, IoT.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,102 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2020-07-17 14:49:21,192 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 14:49:21,193 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 14:49:21,193 [1    ] o.Configuration.LanguageManagementConfig - Converted IoTManager (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 14:49:21,193 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 14:49:21,612 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoTManager.EntityFrameworkCore.IoTManagerDbContext, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:21,698 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoT.EntityFrameworkCore.IoTDbContext, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 14:49:22,781 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-07-17 14:49:22,993 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-07-17 14:49:23,298 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-07-17 14:49:23,418 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: IoTManager
+DEBUG 2020-07-17 14:49:23,634 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-07-17 14:49:23,944 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-07-17 14:49:24,139 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[IoTManager.MultiTenancy.Tenant, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[IoTManager.Authorization.Users.User, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-07-17 14:49:24,194 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2020-07-17 14:49:24,194 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-07-17 14:49:24,200 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.CreateUserDto
+DEBUG 2020-07-17 14:49:24,200 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.UserDto
+DEBUG 2020-07-17 14:49:24,201 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-07-17 14:49:24,201 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-07-17 14:49:24,201 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.CreateRoleDto
+DEBUG 2020-07-17 14:49:24,201 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.PermissionDto
+DEBUG 2020-07-17 14:49:24,201 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.RoleDto
+DEBUG 2020-07-17 14:49:24,202 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-07-17 14:49:24,202 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.TenantDto
+DEBUG 2020-07-17 14:49:24,202 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoT.Application.DeviceDataDto
+INFO  2020-07-17 14:49:26,695 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,ja,zh-Hans
+INFO  2020-07-17 14:49:27,037 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/Users/s9rt1v/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+INFO  2020-07-17 14:49:27,166 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-17 14:49:27,273 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 14:49:32,047 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-17 14:49:33,352 [5    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-17 14:49:33,359 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 1305.0778ms
+INFO  2020-07-17 14:49:33,361 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 14:49:33,370 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 6204.2769ms 302 
+INFO  2020-07-17 14:49:33,394 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-17 14:49:33,416 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 22.5068ms 301 
+INFO  2020-07-17 14:49:33,419 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-17 14:49:33,533 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 114.4719ms 200 text/html;charset=utf-8
+INFO  2020-07-17 14:49:34,816 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-17 14:49:34,820 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 14:49:34,827 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-17 14:49:34,878 [5    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-17 14:49:34,881 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 50.6393ms
+INFO  2020-07-17 14:49:34,883 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 14:49:34,886 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 70.6464ms 302 
+INFO  2020-07-17 14:49:34,890 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-17 14:49:34,894 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.3928ms 301 
+INFO  2020-07-17 14:49:34,901 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-17 14:49:34,904 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.7515ms 200 text/html;charset=utf-8
+INFO  2020-07-17 14:49:35,356 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/v1/swagger.json  
+INFO  2020-07-17 14:49:35,597 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 240.726ms 200 application/json;charset=utf-8
+INFO  2020-07-17 14:49:41,603 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/City/Get?Id=1  
+INFO  2020-07-17 14:49:41,636 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.CityAppService.CityAppService.Get (IoT.Application)'
+INFO  2020-07-17 14:49:41,655 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Get", controller = "City"}. Executing controller action with signature IoT.Application.CityAppService.DTO.CityDto Get(Abp.Application.Services.Dto.EntityDto`1[System.Int32]) on controller IoT.Application.CityAppService.CityAppService (IoT.Application).
+INFO  2020-07-17 14:49:44,742 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-17 14:49:44,762 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.CityAppService.CityAppService.Get (IoT.Application) in 3104.2522ms
+INFO  2020-07-17 14:49:44,765 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.CityAppService.CityAppService.Get (IoT.Application)'
+INFO  2020-07-17 14:49:44,768 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3164.952ms 200 application/json; charset=utf-8
+DEBUG 2020-07-17 15:06:01,520 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-07-17 15:06:01,627 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2020-07-17 15:06:01,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.Web.Host.Startup.IoTManagerWebHostModule, IoTManager.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,647 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerWebCoreModule, IoTManager.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,647 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerApplicationModule, IoTManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerCoreModule, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,648 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.EntityFrameworkCore.IoTManagerEntityFrameworkModule, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,649 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,650 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.EntityFrameworkCore.IoTEntityFrameworkModule, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,650 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Core.IoTCoreModule, IoT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,650 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Application.IoTApplicationModule, IoT.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,650 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,650 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,651 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:01,653 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2020-07-17 15:06:01,741 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 15:06:01,741 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 15:06:01,741 [1    ] o.Configuration.LanguageManagementConfig - Converted IoTManager (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 15:06:01,741 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 15:06:02,065 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoTManager.EntityFrameworkCore.IoTManagerDbContext, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:02,154 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoT.EntityFrameworkCore.IoTDbContext, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 15:06:03,317 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-07-17 15:06:03,517 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-07-17 15:06:03,817 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-07-17 15:06:03,935 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: IoTManager
+DEBUG 2020-07-17 15:06:04,131 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-07-17 15:06:04,447 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-07-17 15:06:04,646 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[IoTManager.MultiTenancy.Tenant, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[IoTManager.Authorization.Users.User, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-07-17 15:06:04,693 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2020-07-17 15:06:04,693 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-07-17 15:06:04,697 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.CreateUserDto
+DEBUG 2020-07-17 15:06:04,697 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.UserDto
+DEBUG 2020-07-17 15:06:04,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-07-17 15:06:04,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-07-17 15:06:04,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.CreateRoleDto
+DEBUG 2020-07-17 15:06:04,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.PermissionDto
+DEBUG 2020-07-17 15:06:04,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.RoleDto
+DEBUG 2020-07-17 15:06:04,699 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-07-17 15:06:04,699 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.TenantDto
+DEBUG 2020-07-17 15:06:04,699 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoT.Application.DeviceDataDto
+INFO  2020-07-17 15:06:06,864 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,ja,zh-Hans
+INFO  2020-07-17 15:06:07,226 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using '/Users/s9rt1v/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+INFO  2020-07-17 15:06:07,341 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-17 15:06:07,455 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 15:06:11,685 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-17 15:06:13,019 [5    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-17 15:06:13,026 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 1335.0438ms
+INFO  2020-07-17 15:06:13,029 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 15:06:13,037 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5697.2735ms 302 
+INFO  2020-07-17 15:06:13,061 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-17 15:06:13,084 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 22.5383ms 301 
+INFO  2020-07-17 15:06:13,087 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-17 15:06:13,198 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 111.4211ms 200 text/html;charset=utf-8
+INFO  2020-07-17 15:06:14,435 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/  
+INFO  2020-07-17 15:06:14,440 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 15:06:14,447 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-17 15:06:14,466 [8    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-17 15:06:14,469 [8    ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 18.9795ms
+INFO  2020-07-17 15:06:14,472 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 15:06:14,475 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 39.8223ms 302 
+INFO  2020-07-17 15:06:14,491 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger  
+INFO  2020-07-17 15:06:14,495 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.6662ms 301 
+INFO  2020-07-17 15:06:14,499 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/index.html  
+INFO  2020-07-17 15:06:14,503 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.9293ms 200 text/html;charset=utf-8
+INFO  2020-07-17 15:06:14,946 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/swagger/v1/swagger.json  
+INFO  2020-07-17 15:06:15,172 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 225.8688ms 200 application/json;charset=utf-8
+INFO  2020-07-17 15:06:45,409 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:16504/api/services/app/Device/GetAll  
+INFO  2020-07-17 15:06:45,441 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application)'
+INFO  2020-07-17 15:06:45,459 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Device"}. Executing controller action with signature Abp.Application.Services.Dto.PagedResultDto`1[IoT.Application.DeviceAppService.DeviceService.Dto.DeviceDto] GetAll(L._52ABP.Application.Dtos.PagedSortedAndFilteredInputDto) on controller IoT.Application.DeviceAppService.DeviceService.DeviceAppService (IoT.Application).
+INFO  2020-07-17 15:06:48,875 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-07-17 15:06:48,894 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application) in 3432.7398ms
+INFO  2020-07-17 15:06:48,897 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoT.Application.DeviceAppService.DeviceService.DeviceAppService.GetAll (IoT.Application)'
+INFO  2020-07-17 15:06:48,899 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3490.3582ms 200 application/json; charset=utf-8
+DEBUG 2020-07-17 17:25:33,854 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-07-17 17:25:33,974 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2020-07-17 17:25:34,001 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.Web.Host.Startup.IoTManagerWebHostModule, IoTManager.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,003 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerWebCoreModule, IoTManager.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,004 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerApplicationModule, IoTManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,004 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerCoreModule, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,005 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,005 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,005 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,006 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,006 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.EntityFrameworkCore.IoTManagerEntityFrameworkModule, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,008 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.EntityFrameworkCore.IoTEntityFrameworkModule, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,008 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Core.IoTCoreModule, IoT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,009 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Application.IoTApplicationModule, IoT.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,009 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,010 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,010 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:34,013 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2020-07-17 17:25:34,188 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 17:25:34,188 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 17:25:34,188 [1    ] o.Configuration.LanguageManagementConfig - Converted IoTManager (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 17:25:34,188 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 17:25:34,937 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoTManager.EntityFrameworkCore.IoTManagerDbContext, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:35,040 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoT.EntityFrameworkCore.IoTDbContext, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:25:36,022 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-07-17 17:25:36,153 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-07-17 17:25:36,204 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-07-17 17:25:36,231 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: IoTManager
+DEBUG 2020-07-17 17:25:36,267 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-07-17 17:25:36,530 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-07-17 17:25:36,689 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[IoTManager.MultiTenancy.Tenant, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[IoTManager.Authorization.Users.User, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-07-17 17:25:36,804 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2020-07-17 17:25:36,804 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-07-17 17:25:36,814 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.CreateUserDto
+DEBUG 2020-07-17 17:25:36,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.UserDto
+DEBUG 2020-07-17 17:25:36,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-07-17 17:25:36,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-07-17 17:25:36,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.CreateRoleDto
+DEBUG 2020-07-17 17:25:36,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.PermissionDto
+DEBUG 2020-07-17 17:25:36,816 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.RoleDto
+DEBUG 2020-07-17 17:25:36,817 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-07-17 17:25:36,818 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.TenantDto
+DEBUG 2020-07-17 17:25:36,818 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoT.Application.DeviceDataDto
+DEBUG 2020-07-17 17:28:49,473 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-07-17 17:28:49,624 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2020-07-17 17:28:49,664 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.Web.Host.Startup.IoTManagerWebHostModule, IoTManager.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,667 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerWebCoreModule, IoTManager.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,668 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerApplicationModule, IoTManager.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,668 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.IoTManagerCoreModule, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,669 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,670 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,670 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,671 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,672 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoTManager.EntityFrameworkCore.IoTManagerEntityFrameworkModule, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,672 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,673 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,673 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,674 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.EntityFrameworkCore.IoTEntityFrameworkModule, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,675 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Core.IoTCoreModule, IoT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,675 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: IoT.Application.IoTApplicationModule, IoT.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,676 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,676 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,676 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:49,681 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2020-07-17 17:28:49,838 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 17:28:49,838 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 17:28:49,838 [1    ] o.Configuration.LanguageManagementConfig - Converted IoTManager (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 17:28:49,838 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-07-17 17:28:50,406 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoTManager.EntityFrameworkCore.IoTManagerDbContext, IoTManager.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:50,510 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: IoT.EntityFrameworkCore.IoTDbContext, IoT.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-07-17 17:28:51,881 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-07-17 17:28:52,003 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-07-17 17:28:52,054 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-07-17 17:28:52,079 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: IoTManager
+DEBUG 2020-07-17 17:28:52,113 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-07-17 17:28:52,390 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-07-17 17:28:52,548 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[IoTManager.MultiTenancy.Tenant, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[IoTManager.Authorization.Users.User, IoTManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-07-17 17:28:52,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2020-07-17 17:28:52,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-07-17 17:28:52,621 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.CreateUserDto
+DEBUG 2020-07-17 17:28:52,623 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Users.Dto.UserDto
+DEBUG 2020-07-17 17:28:52,623 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-07-17 17:28:52,623 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-07-17 17:28:52,623 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.CreateRoleDto
+DEBUG 2020-07-17 17:28:52,623 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.PermissionDto
+DEBUG 2020-07-17 17:28:52,624 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.Roles.Dto.RoleDto
+DEBUG 2020-07-17 17:28:52,624 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-07-17 17:28:52,625 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoTManager.MultiTenancy.Dto.TenantDto
+DEBUG 2020-07-17 17:28:52,625 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - IoT.Application.DeviceDataDto
+INFO  2020-07-17 17:28:56,022 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,zh-Hans,ja
+INFO  2020-07-17 17:28:56,498 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-07-17 17:28:56,610 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-07-17 17:28:56,762 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 17:29:01,855 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller IoTManager.Web.Host.Controllers.HomeController (IoTManager.Web.Host).
+INFO  2020-07-17 17:29:03,651 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-07-17 17:29:03,663 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host) in 1798.4604ms
+INFO  2020-07-17 17:29:03,665 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'IoTManager.Web.Host.Controllers.HomeController.Index (IoTManager.Web.Host)'
+INFO  2020-07-17 17:29:03,696 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 7083.1045ms 302 
+INFO  2020-07-17 17:29:03,702 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2020-07-17 17:29:03,743 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 40.3678ms 301 
+INFO  2020-07-17 17:29:03,753 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-07-17 17:29:03,931 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 176.6943ms 200 text/html;charset=utf-8
+INFO  2020-07-17 17:29:04,415 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-07-17 17:29:04,676 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-07-17 17:29:05,097 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 715.7818ms 200 application/json;charset=utf-8
