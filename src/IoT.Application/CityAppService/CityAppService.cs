@@ -85,7 +85,7 @@ namespace IoT.Application.CityAppService
 
         public PagedResultDto<CityDto> GetAll(CityPagedSortedAndFilteredDto input)
         {
-            var query = _cityRepository.GetAll().Where(c=>c.IsDeleted==false).WhereIf(!input.FilterText.IsNullOrEmpty(),c=>input.FilterText.Contains(c.CityName));
+            var query = _cityRepository.GetAll().Where(c=>c.IsDeleted==false).WhereIf(!input.FilterText.IsNullOrEmpty(),c=>c.CityName.Contains(input.FilterText));
             
             var total = query.Count();
             var result = input.Sorting != null
